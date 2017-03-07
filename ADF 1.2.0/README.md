@@ -4,6 +4,6 @@ This folder contains a collection of examples of simple (and less simple) projec
 
 For further information about the repository, please check the [introduction](https://github.com/Alfresco/adf-examples).
 
-In the folder structure you can find on sub-folder for each project.
+In this space you can find one folder for each project.
 Choose your preferred one and start from the `README` file containing the description of the use case, the prerequisites and how to make it work.
 
