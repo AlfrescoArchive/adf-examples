@@ -44,12 +44,11 @@ To view the full list of examples related to an Alfresco ADF version, click on t
 
 To start using the Alfresco ADF examples, you simply need to follow the tasks listed below.
 
-1. Clone the repository. Opening a terminal and running the command below.
+- Clone the repository. Opening a terminal and running the command below.
 ```
 git clone https://github.com/Alfresco/adf-examples
 ```
-
-2. Checking the projects hosted into it. After the clone, a folder `adf-example` will be created into your file system. Dive into the folder structure and choose you preferred project to run.
+- Checking the projects hosted into it. After the clone, a folder `adf-example` will be created into your file system. Dive into the folder structure and choose you preferred project to run.
 
 For further details about each project, check the `README` file containing the description of the use case, the prerequisites and how to make it work.
 
