@@ -36,7 +36,6 @@ Below an example of repository structure, representing the two levels: the Alfre
         |-- ...
     |-- README.md
     |-- ...
-
 ```
 
 To view the full list of examples related to an Alfresco ADF version, click on the folder of the repository.
@@ -50,7 +49,10 @@ Before opeining a new issue, please always check if one similar to your use case
 # How to receive support
 
 If one (or more) of the examples don't work for you, you'd probably need support.
-This is not the right place to ask (and receive) support because exists a better place for it: [![Join the chat at https://gitter.im/Alfresco/alfresco-ng2-components](https://badges.gitter.im/Alfresco/alfresco-ng2-components.svg)](https://gitter.im/Alfresco/alfresco-ng2-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+This is not the right place to ask (and receive) support because exists a better place for it:
+
+[![Join the chat at https://gitter.im/Alfresco/alfresco-ng2-components](https://badges.gitter.im/Alfresco/alfresco-ng2-components.svg)](https://gitter.im/Alfresco/alfresco-ng2-components?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Feel free to ask there.
 
 # License and disclaimer
