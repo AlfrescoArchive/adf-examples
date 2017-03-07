@@ -1,3 +1,0 @@
-# ADF example - TODO
-
-TODO
