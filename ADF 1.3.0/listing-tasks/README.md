@@ -1,4 +1,4 @@
-# Listing tasks (ADF 1.2.0 example)
+# Listing tasks (ADF 1.3.0 example)
 
 This project is part of the [Alfresco Application Developer Framework](https://github.com/Alfresco/alfresco-ng2-components) collection of examples.
 For further details about the repository and all the available examples please check the [introduction](https://github.com/Alfresco/adf-examples).
@@ -30,7 +30,7 @@ TODO
 
 ## Disclaimer
 
-All the content available in this tutorial has been developed and tested using Alfresco ADF v1.2.0 LA release, NodeJs 6.10.0 on a Linux Ubuntu 16.04.01 LTS as Operating System.
+All the content available in this tutorial has been developed and tested using Alfresco ADF v1.3.0 LA release, NodeJs 6.10.0 on a Linux Ubuntu 16.04.01 LTS as Operating System.
 Each variation to the listed versions and tools could affect the success of the execution, even if the involved technologies and tasks have been defined to be as more general as possible, not related to any specific context or platform.
 
 Please let us know for any issue or problem, requesting for support into the [Community Portal dedicated to the Alfresco ADF](https://community.alfresco.com/community/application-development-framework) or to the [Gitter space](https://gitter.im/Alfresco/alfresco-ng2-components) dedicated to the Alfresco Angular 2 components.
