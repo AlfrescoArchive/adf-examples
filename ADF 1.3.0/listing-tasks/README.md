@@ -10,15 +10,17 @@ By its nature, the application interacts with Alfresco Process Services as BPM S
 
 ## Prerequisites
 
-- Alfresco Activiti Enterprise v1.5.2.1+ (running on port 9999). Check [here](https://community.alfresco.com/docs/DOC-6614-installing-activiti-bpm-as-adf-service-layer) for further information on how to install and setup Alfresco Activiti as Alfresco ADF Service Layer.
+Before running the application, please check the assumptions listed below.
+
+- Alfresco Activiti Enterprise v1.5.2.1+ running on `localhost` on port `9999`. You can check [here](https://community.alfresco.com/docs/DOC-6614-installing-activiti-bpm-as-adf-service-layer) for further details on how to install and setup Alfresco Activiti as Alfresco ADF Service Layer.
 
 ## Running the application
 
-To run the application please follow the tasks below.
+Once the prerequisites will be checked, follow the tasks below to run the application.
 
-+ Open a terminal and change the directory to be in the `listing-tasks` folder.
+- Open a terminal and change the directory to be in the `listing-tasks` folder.
 
-+ TODO
+- TODO
 
 ## Screenshots
 
@@ -28,7 +30,7 @@ TODO
 
 ## Disclaimer
 
-All the content available in this tutorial has been developed and tested using Alfresco ADF v1.2.0 LA release on a Linux Ubuntu 16.04.01 LTS as Operating System.
+All the content available in this tutorial has been developed and tested using Alfresco ADF v1.2.0 LA release, NodeJs 6.10.0 on a Linux Ubuntu 16.04.01 LTS as Operating System.
 Each variation to the listed versions and tools could affect the success of the execution, even if the involved technologies and tasks have been defined to be as more general as possible, not related to any specific context or platform.
 
 Please let us know for any issue or problem, requesting for support into the [Community Portal dedicated to the Alfresco ADF](https://community.alfresco.com/community/application-development-framework) or to the [Gitter space](https://gitter.im/Alfresco/alfresco-ng2-components) dedicated to the Alfresco Angular 2 components.

@@ -1,4 +1,4 @@
-# ADF examples
+# Application Development Framework examples
 
 This repository contains a collection of examples of simple (and less simple) projects developed using the [Alfresco Application Developer Framework](https://github.com/Alfresco/alfresco-ng2-components). 
 
