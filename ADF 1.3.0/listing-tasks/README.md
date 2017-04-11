@@ -22,15 +22,17 @@ Once the prerequisites will be checked, follow the tasks below to run the applic
 
 - Open a terminal and change the directory to be in the `listing-tasks` folder.
 
-- Install dependencies executing the command below.
+- Install dependencies executing the command below. The execution of this command will require some time to be completed. If some warnings will appear into the terminal, don't worry.
 
 ```sh
 npm install
 ```
 
-This command compiles and starts the project in watch mode.
-Browser will automatically reload upon changes.
-Upon start you can navigate to `http://localhost:3000` with your preferred browser.
+- Compile and run the application executing the command below. The command compiles and starts the project in watch mode (some errors with description 'npm ERR! peer dep missing...' may appear). Upon start, you can navigate to `http://localhost:3000` with your preferred browser. The browser will automatically reload upon changes to the source code.
+
+```sh
+npm start
+```
 
 ATTENTION: This script is recommended for development environment and not suited for headless servers and network access.
 
@@ -40,9 +42,9 @@ Below a screenshot of the application as an example.
 
 TODO
 
-## feedback, issues or support
+## Feedback, issues or support
 
-Please let us know for any issue or problem, requesting for support into the [Community Portal dedicated to the Alfresco ADF](https://community.alfresco.com/community/application-development-framework) or to the [Gitter space](https://gitter.im/Alfresco/alfresco-ng2-components) dedicated to the Alfresco Angular 2 components.
+For feedback, issues or simply to request support, che the introduction [introduction](https://github.com/Alfresco/adf-examples) for further details.
 
 ## Disclaimer
 
