@@ -44,6 +44,14 @@ Below some screenshots of the application as an example.
 
 ![Login page](public/img/screenshot.1.png)
 
+![Task list](public/img/screenshot.2.png)
+
+![Left menu](public/img/screenshot.3.png)
+
+![Help card](public/img/screenshot.4.png)
+
+![Settings](public/img/screenshot.5.png)
+
 ## Feedback, issues or support
 
 For feedback, issues or simply to request support, che the introduction [introduction](https://github.com/Alfresco/adf-examples) for further details.
