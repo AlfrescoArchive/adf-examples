@@ -34,7 +34,7 @@ npm install
 npm start
 ```
 
-- Once accessed to the task list, you probably see an empty list, according to you Alfresco Process Services instance. Create few tasks using the Alfresco Process Services User Interface and refresh the application again. Press the question mark icon on the top right of the web page, to view a helping description.
+- Once accessed to the task list, you'll probably see an empty list, according to your Alfresco Process Services instance. Create few tasks using the Alfresco Process Services User Interface and refresh the application again. Press the question mark icon on the top right of the web page, to view a helping description.
 
 ATTENTION: This script is recommended for development environment and not suited for headless servers and network access.
 
