@@ -1,0 +1,44 @@
+@media screen and (max-width: 1024px) {
+  .mdl-layout__header {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mdl-layout__header {
+    display: block;
+  }
+}
+
+.mdl-layout-title {
+  font-size: 17px;
+}
+
+.user-profile {
+  margin-right: 10px;
+}
+
+.mdl-button-padding {
+  padding-left: 20px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.mdl-navigation__link {
+  cursor: pointer;
+}
+
+.mdl-navigation__link label {
+  cursor: pointer;
+}
+
+.helping-card {
+  margin-left: 20px;
+}
+
+.helping-card-title {
+  background-color: rgb(249, 159, 56);
+  color: white;
+}

@@ -1,0 +1,32 @@
+<div class="mdl-grid">
+
+    <!-- Task panel. -->
+    <div *ngIf="showTaskPanel" class="mdl-cell mdl-cell--12-col task-column mdl-shadow--2dp activiti-task-details">
+
+        <activiti-task-details 
+            [taskId]="taskId"
+            (formCompleted)="completeButtonClicked()">
+        </activiti-task-details>
+
+    </div>
+
+    <!-- Task list panel. -->
+    <div class="mdl-cell mdl-cell--12-col task-column mdl-shadow--2dp">
+
+        <activiti-tasklist
+            [appId]=""
+            [state]="'open'"
+            [assignment]="'assignee'"
+            (rowClick)="taskClickedOnTaskList($event)"
+            #taskList>
+            <!-- Columns presented in the task list. -->
+            <data-columns>
+                <data-column key="name" title="NAME" class="name-column"></data-column>
+                <data-column key="description" title="Description" class="name-column"></data-column>
+                <data-column key="created" title="Date of creation" class="name-column"></data-column>
+            </data-columns>
+        </activiti-tasklist>
+
+    </div>
+
+</div>

@@ -1,0 +1,13 @@
+.container {
+  margin: 10px;
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    margin: 0;
+  }
+}
+
+.activiti-task-details {
+  padding: 20px;
+}
