@@ -1,0 +1,728 @@
+{
+  "name": "creating-processes-and-tasks",
+  "version": "0.1.0",
+  "problems": [
+    "peer dep missing: @angular/common@^2.3.0, required by ng2-charts@1.5.0",
+    "peer dep missing: @angular/common@^2.3.0, required by ng2-charts@1.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@^2.3.0, required by ng2-charts@1.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/core@^2.3.0, required by ng2-charts@1.5.0",
+    "peer dep missing: @angular/core@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0",
+    "peer dep missing: @angular/http@~2.0.0, required by ng2-translate@2.5.0"
+  ],
+  "dependencies": {
+    "@angular/common": {
+      "required": {
+        "_args": [
+          [
+            {
+              "raw": "@angular/common@2.2.2",
+              "scope": "@angular",
+              "escapedName": "@angular%2fcommon",
+              "name": "@angular/common",
+              "rawSpec": "2.2.2",
+              "spec": "2.2.2",
+              "type": "version"
+            },
+            "/home/adf/Desktop/creating-processes-and-tasks"
+          ]
+        ],
+        "_from": "@angular/common@2.2.2",
+        "_id": "@angular/common@2.2.2",
+        "_inCache": true,
+        "_location": "/@angular/common",
+        "_nodeVersion": "5.8.0",
+        "_npmOperationalInternal": {
+          "host": "packages-12-west.internal.npmjs.com",
+          "tmp": "tmp/common-2.2.2.tgz_1479854705195_0.5866104734595865"
+        },
+        "_npmUser": {
+          "name": "angular",
+          "email": "angular-core+npm@google.com"
+        },
+        "_npmVersion": "3.5.3",
+        "_phantomChildren": {},
+        "_requested": {
+          "raw": "@angular/common@2.2.2",
+          "scope": "@angular",
+          "escapedName": "@angular%2fcommon",
+          "name": "@angular/common",
+          "rawSpec": "2.2.2",
+          "spec": "2.2.2",
+          "type": "version"
+        },
+        "_requiredBy": [
+          "/",
+          "/ng2-activiti-analytics",
+          "/ng2-activiti-diagrams",
+          "/ng2-activiti-form",
+          "/ng2-activiti-processlist",
+          "/ng2-activiti-tasklist",
+          "/ng2-alfresco-core",
+          "/ng2-alfresco-datatable",
+          "/ng2-alfresco-documentlist",
+          "/ng2-alfresco-login",
+          "/ng2-alfresco-search",
+          "/ng2-alfresco-tag",
+          "/ng2-alfresco-upload",
+          "/ng2-alfresco-userinfo",
+          "/ng2-alfresco-viewer",
+          "/ng2-alfresco-webscript"
+        ],
+        "_resolved": "https://registry.npmjs.org/@angular/common/-/common-2.2.2.tgz",
+        "_shasum": "a2fb13260c393cfe9802e75c8a483517b9c74dbd",
+        "_shrinkwrap": null,
+        "_spec": "@angular/common@2.2.2",
+        "_where": "/home/adf/Desktop/creating-processes-and-tasks",
+        "author": {
+          "name": "angular"
+        },
+        "bugs": {
+          "url": "https://github.com/angular/angular/issues"
+        },
+        "dependencies": {},
+        "description": "Angular - commonly needed directives and services",
+        "devDependencies": {},
+        "directories": {},
+        "dist": {
+          "shasum": "a2fb13260c393cfe9802e75c8a483517b9c74dbd",
+          "tarball": "https://registry.npmjs.org/@angular/common/-/common-2.2.2.tgz"
+        },
+        "homepage": "https://github.com/angular/angular#readme",
+        "license": "MIT",
+        "main": "bundles/common.umd.js",
+        "maintainers": [
+          {
+            "name": "angular",
+            "email": "angular-core+npm@google.com"
+          }
+        ],
+        "module": "index.js",
+        "name": "@angular/common",
+        "optionalDependencies": {},
+        "peerDependencies": {
+          "@angular/core": "2.2.2"
+        },
+        "readme": "ERROR: No README data found!",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/angular/angular.git"
+        },
+        "scripts": {},
+        "typings": "index.d.ts",
+        "version": "2.2.2",
+        "_dependencies": {},
+        "path": "/home/adf/Desktop/creating-processes-and-tasks/node_modules/@angular/common",
+        "error": "[Circular]",
+        "extraneous": false,
+        "peerMissing": [
+          {
+            "requiredBy": "ng2-charts@1.5.0",
+            "requires": "@angular/common@^2.3.0"
+          },
+          {
+            "requiredBy": "ng2-charts@1.5.0",
+            "requires": "@angular/common@^2.3.0"
+          }
+        ]
+      },
+      "peerMissing": true
+    },
+    "@angular/compiler": {
+      "version": "2.2.2",
+      "from": "@angular/compiler@2.2.2",
+      "resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-2.2.2.tgz"
+    },
+    "@angular/compiler-cli": {
+      "version": "2.2.2",
+      "from": "@angular/compiler-cli@2.2.2",
+      "resolved": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-2.2.2.tgz"
+    },
+    "@angular/core": {
+      "required": {
+        "_args": [
+          [
+            {
+              "raw": "@angular/core@2.2.2",
+              "scope": "@angular",
+              "escapedName": "@angular%2fcore",
+              "name": "@angular/core",
+              "rawSpec": "2.2.2",
+              "spec": "2.2.2",
+              "type": "version"
+            },
+            "/home/adf/Desktop/creating-processes-and-tasks"
+          ]
+        ],
+        "_from": "@angular/core@2.2.2",
+        "_id": "@angular/core@2.2.2",
+        "_inCache": true,
+        "_location": "/@angular/core",
+        "_nodeVersion": "5.8.0",
+        "_npmOperationalInternal": {
+          "host": "packages-18-east.internal.npmjs.com",
+          "tmp": "tmp/core-2.2.2.tgz_1479854720690_0.03251585876569152"
+        },
+        "_npmUser": {
+          "name": "angular",
+          "email": "angular-core+npm@google.com"
+        },
+        "_npmVersion": "3.5.3",
+        "_phantomChildren": {},
+        "_requested": {
+          "raw": "@angular/core@2.2.2",
+          "scope": "@angular",
+          "escapedName": "@angular%2fcore",
+          "name": "@angular/core",
+          "rawSpec": "2.2.2",
+          "spec": "2.2.2",
+          "type": "version"
+        },
+        "_requiredBy": [
+          "/",
+          "/ng2-activiti-analytics",
+          "/ng2-activiti-diagrams",
+          "/ng2-activiti-form",
+          "/ng2-activiti-processlist",
+          "/ng2-activiti-tasklist",
+          "/ng2-alfresco-core",
+          "/ng2-alfresco-datatable",
+          "/ng2-alfresco-documentlist",
+          "/ng2-alfresco-login",
+          "/ng2-alfresco-search",
+          "/ng2-alfresco-tag",
+          "/ng2-alfresco-upload",
+          "/ng2-alfresco-userinfo",
+          "/ng2-alfresco-viewer",
+          "/ng2-alfresco-webscript"
+        ],
+        "_resolved": "https://registry.npmjs.org/@angular/core/-/core-2.2.2.tgz",
+        "_shasum": "ab6cb457946f48af6514f7023636f735bd928c06",
+        "_shrinkwrap": "[Circular]",
+        "_spec": "@angular/core@2.2.2",
+        "_where": "/home/adf/Desktop/creating-processes-and-tasks",
+        "author": {
+          "name": "angular"
+        },
+        "bugs": {
+          "url": "https://github.com/angular/angular/issues"
+        },
+        "dependencies": {},
+        "description": "Angular - the core framework",
+        "devDependencies": {},
+        "directories": {},
+        "dist": {
+          "shasum": "ab6cb457946f48af6514f7023636f735bd928c06",
+          "tarball": "https://registry.npmjs.org/@angular/core/-/core-2.2.2.tgz"
+        },
+        "homepage": "https://github.com/angular/angular#readme",
+        "license": "MIT",
+        "main": "bundles/core.umd.js",
+        "maintainers": [
+          {
+            "name": "angular",
+            "email": "angular-core+npm@google.com"
+          }
+        ],
+        "module": "index.js",
+        "name": "@angular/core",
+        "optionalDependencies": {},
+        "peerDependencies": {
+          "rxjs": "5.0.0-beta.12",
+          "zone.js": "^0.6.21"
+        },
+        "readme": "ERROR: No README data found!",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/angular/angular.git"
+        },
+        "scripts": {},
+        "typings": "index.d.ts",
+        "version": "2.2.2",
+        "_dependencies": {},
+        "path": "/home/adf/Desktop/creating-processes-and-tasks/node_modules/@angular/core",
+        "error": "[Circular]",
+        "extraneous": false,
+        "peerMissing": [
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-charts@1.5.0",
+            "requires": "@angular/core@^2.3.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-charts@1.5.0",
+            "requires": "@angular/core@^2.3.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/core@~2.0.0"
+          }
+        ]
+      },
+      "peerMissing": true
+    },
+    "@angular/forms": {
+      "version": "2.2.2",
+      "from": "@angular/forms@2.2.2",
+      "resolved": "https://registry.npmjs.org/@angular/forms/-/forms-2.2.2.tgz"
+    },
+    "@angular/http": {
+      "required": {
+        "_args": [
+          [
+            {
+              "raw": "@angular/http@2.2.2",
+              "scope": "@angular",
+              "escapedName": "@angular%2fhttp",
+              "name": "@angular/http",
+              "rawSpec": "2.2.2",
+              "spec": "2.2.2",
+              "type": "version"
+            },
+            "/home/adf/Desktop/creating-processes-and-tasks"
+          ]
+        ],
+        "_from": "@angular/http@2.2.2",
+        "_id": "@angular/http@2.2.2",
+        "_inCache": true,
+        "_location": "/@angular/http",
+        "_nodeVersion": "5.8.0",
+        "_npmOperationalInternal": {
+          "host": "packages-12-west.internal.npmjs.com",
+          "tmp": "tmp/http-2.2.2.tgz_1479854727106_0.385825410252437"
+        },
+        "_npmUser": {
+          "name": "angular",
+          "email": "angular-core+npm@google.com"
+        },
+        "_npmVersion": "3.5.3",
+        "_phantomChildren": {},
+        "_requested": {
+          "raw": "@angular/http@2.2.2",
+          "scope": "@angular",
+          "escapedName": "@angular%2fhttp",
+          "name": "@angular/http",
+          "rawSpec": "2.2.2",
+          "spec": "2.2.2",
+          "type": "version"
+        },
+        "_requiredBy": [
+          "/",
+          "/ng2-activiti-analytics",
+          "/ng2-activiti-diagrams",
+          "/ng2-activiti-form",
+          "/ng2-activiti-processlist",
+          "/ng2-activiti-tasklist",
+          "/ng2-alfresco-core",
+          "/ng2-alfresco-datatable",
+          "/ng2-alfresco-documentlist",
+          "/ng2-alfresco-login",
+          "/ng2-alfresco-search",
+          "/ng2-alfresco-tag",
+          "/ng2-alfresco-upload",
+          "/ng2-alfresco-userinfo",
+          "/ng2-alfresco-viewer",
+          "/ng2-alfresco-webscript"
+        ],
+        "_resolved": "https://registry.npmjs.org/@angular/http/-/http-2.2.2.tgz",
+        "_shasum": "900c2879c135366d81a95a322327717e08b156e0",
+        "_shrinkwrap": "[Circular]",
+        "_spec": "@angular/http@2.2.2",
+        "_where": "/home/adf/Desktop/creating-processes-and-tasks",
+        "author": {
+          "name": "angular"
+        },
+        "bugs": {
+          "url": "https://github.com/angular/angular/issues"
+        },
+        "dependencies": {},
+        "description": "Angular - the http service",
+        "devDependencies": {},
+        "directories": {},
+        "dist": {
+          "shasum": "900c2879c135366d81a95a322327717e08b156e0",
+          "tarball": "https://registry.npmjs.org/@angular/http/-/http-2.2.2.tgz"
+        },
+        "homepage": "https://github.com/angular/angular#readme",
+        "license": "MIT",
+        "main": "bundles/http.umd.js",
+        "maintainers": [
+          {
+            "name": "angular",
+            "email": "angular-core+npm@google.com"
+          }
+        ],
+        "module": "index.js",
+        "name": "@angular/http",
+        "optionalDependencies": {},
+        "peerDependencies": {
+          "rxjs": "5.0.0-beta.12",
+          "@angular/core": "2.2.2",
+          "@angular/platform-browser": "2.2.2"
+        },
+        "readme": "ERROR: No README data found!",
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/angular/angular.git"
+        },
+        "scripts": {},
+        "typings": "index.d.ts",
+        "version": "2.2.2",
+        "_dependencies": {},
+        "path": "/home/adf/Desktop/creating-processes-and-tasks/node_modules/@angular/http",
+        "error": "[Circular]",
+        "extraneous": false,
+        "peerMissing": [
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          },
+          {
+            "requiredBy": "ng2-translate@2.5.0",
+            "requires": "@angular/http@~2.0.0"
+          }
+        ]
+      },
+      "peerMissing": true
+    },
+    "@angular/material": {
+      "version": "2.0.0-beta.1",
+      "from": "@angular/material@2.0.0-beta.1",
+      "resolved": "https://registry.npmjs.org/@angular/material/-/material-2.0.0-beta.1.tgz"
+    },
+    "@angular/platform-browser": {
+      "version": "2.2.2",
+      "from": "@angular/platform-browser@2.2.2",
+      "resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-2.2.2.tgz"
+    },
+    "@angular/platform-browser-dynamic": {
+      "version": "2.2.2",
+      "from": "@angular/platform-browser-dynamic@2.2.2",
+      "resolved": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.2.2.tgz"
+    },
+    "@angular/router": {
+      "version": "3.2.2",
+      "from": "@angular/router@3.2.2",
+      "resolved": "https://registry.npmjs.org/@angular/router/-/router-3.2.2.tgz"
+    },
+    "@angular/upgrade": {
+      "version": "2.2.2",
+      "from": "@angular/upgrade@2.2.2",
+      "resolved": "https://registry.npmjs.org/@angular/upgrade/-/upgrade-2.2.2.tgz"
+    },
+    "alfresco-js-api": {
+      "version": "1.3.0",
+      "from": "alfresco-js-api@>=1.3.0 <1.4.0",
+      "resolved": "https://registry.npmjs.org/alfresco-js-api/-/alfresco-js-api-1.3.0.tgz"
+    },
+    "chart.js": {
+      "version": "2.5.0",
+      "from": "chart.js@2.5.0",
+      "resolved": "https://registry.npmjs.org/chart.js/-/chart.js-2.5.0.tgz"
+    },
+    "core-js": {
+      "version": "2.4.1",
+      "from": "core-js@2.4.1",
+      "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.4.1.tgz"
+    },
+    "dialog-polyfill": {
+      "version": "0.4.7",
+      "from": "dialog-polyfill@0.4.7",
+      "resolved": "https://registry.npmjs.org/dialog-polyfill/-/dialog-polyfill-0.4.7.tgz"
+    },
+    "element.scrollintoviewifneeded-polyfill": {
+      "version": "1.0.1",
+      "from": "element.scrollintoviewifneeded-polyfill@1.0.1",
+      "resolved": "https://registry.npmjs.org/element.scrollintoviewifneeded-polyfill/-/element.scrollintoviewifneeded-polyfill-1.0.1.tgz"
+    },
+    "flag-icon-css": {
+      "version": "2.3.0",
+      "from": "flag-icon-css@2.3.0",
+      "resolved": "https://registry.npmjs.org/flag-icon-css/-/flag-icon-css-2.3.0.tgz"
+    },
+    "hammerjs": {
+      "version": "2.0.8",
+      "from": "hammerjs@2.0.8",
+      "resolved": "https://registry.npmjs.org/hammerjs/-/hammerjs-2.0.8.tgz"
+    },
+    "material-design-icons": {
+      "version": "2.2.3",
+      "from": "material-design-icons@2.2.3",
+      "resolved": "https://registry.npmjs.org/material-design-icons/-/material-design-icons-2.2.3.tgz"
+    },
+    "material-design-lite": {
+      "version": "1.2.1",
+      "from": "material-design-lite@1.2.1",
+      "resolved": "https://registry.npmjs.org/material-design-lite/-/material-design-lite-1.2.1.tgz"
+    },
+    "md-date-time-picker": {
+      "version": "2.2.0",
+      "from": "md-date-time-picker@2.2.0",
+      "resolved": "https://registry.npmjs.org/md-date-time-picker/-/md-date-time-picker-2.2.0.tgz"
+    },
+    "moment": {
+      "version": "2.15.1",
+      "from": "moment@2.15.1",
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.15.1.tgz"
+    },
+    "ng2-3d-editor": {
+      "version": "0.0.15",
+      "from": "ng2-3d-editor@0.0.15",
+      "resolved": "https://registry.npmjs.org/ng2-3d-editor/-/ng2-3d-editor-0.0.15.tgz"
+    },
+    "ng2-activiti-analytics": {
+      "version": "1.3.0",
+      "from": "ng2-activiti-analytics@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-analytics/-/ng2-activiti-analytics-1.3.0.tgz"
+    },
+    "ng2-activiti-form": {
+      "version": "1.3.0",
+      "from": "ng2-activiti-form@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-form/-/ng2-activiti-form-1.3.0.tgz"
+    },
+    "ng2-activiti-processlist": {
+      "version": "1.3.0",
+      "from": "ng2-activiti-processlist@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-processlist/-/ng2-activiti-processlist-1.3.0.tgz"
+    },
+    "ng2-activiti-tasklist": {
+      "version": "1.3.0",
+      "from": "ng2-activiti-tasklist@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-tasklist/-/ng2-activiti-tasklist-1.3.0.tgz"
+    },
+    "ng2-alfresco-core": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-core@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-core/-/ng2-alfresco-core-1.3.0.tgz"
+    },
+    "ng2-alfresco-datatable": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-datatable@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-datatable/-/ng2-alfresco-datatable-1.3.0.tgz"
+    },
+    "ng2-alfresco-documentlist": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-documentlist@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-documentlist/-/ng2-alfresco-documentlist-1.3.0.tgz"
+    },
+    "ng2-alfresco-login": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-login@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-login/-/ng2-alfresco-login-1.3.0.tgz"
+    },
+    "ng2-alfresco-search": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-search@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-search/-/ng2-alfresco-search-1.3.0.tgz"
+    },
+    "ng2-alfresco-tag": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-tag@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-tag/-/ng2-alfresco-tag-1.3.0.tgz"
+    },
+    "ng2-alfresco-upload": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-upload@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-upload/-/ng2-alfresco-upload-1.3.0.tgz"
+    },
+    "ng2-alfresco-userinfo": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-userinfo@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-userinfo/-/ng2-alfresco-userinfo-1.3.0.tgz"
+    },
+    "ng2-alfresco-viewer": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-viewer@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-viewer/-/ng2-alfresco-viewer-1.3.0.tgz"
+    },
+    "ng2-alfresco-webscript": {
+      "version": "1.3.0",
+      "from": "ng2-alfresco-webscript@1.3.0",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-webscript/-/ng2-alfresco-webscript-1.3.0.tgz"
+    },
+    "ng2-charts": {
+      "version": "1.5.0",
+      "from": "ng2-charts@1.5.0",
+      "resolved": "https://registry.npmjs.org/ng2-charts/-/ng2-charts-1.5.0.tgz"
+    },
+    "ng2-translate": {
+      "version": "2.5.0",
+      "from": "ng2-translate@2.5.0",
+      "resolved": "https://registry.npmjs.org/ng2-translate/-/ng2-translate-2.5.0.tgz"
+    },
+    "pdfjs-dist": {
+      "version": "1.5.404",
+      "from": "pdfjs-dist@1.5.404",
+      "resolved": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-1.5.404.tgz"
+    },
+    "raphael": {
+      "version": "2.2.7",
+      "from": "raphael@2.2.7",
+      "resolved": "https://registry.npmjs.org/raphael/-/raphael-2.2.7.tgz"
+    },
+    "reflect-metadata": {
+      "version": "0.1.10",
+      "from": "reflect-metadata@0.1.10",
+      "resolved": "https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.1.10.tgz"
+    },
+    "rxjs": {
+      "version": "5.0.0-beta.12",
+      "from": "rxjs@5.0.0-beta.12",
+      "resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.0.0-beta.12.tgz"
+    },
+    "systemjs": {
+      "version": "0.19.27",
+      "from": "systemjs@0.19.27",
+      "resolved": "https://registry.npmjs.org/systemjs/-/systemjs-0.19.27.tgz"
+    },
+    "zone.js": {
+      "version": "0.6.26",
+      "from": "zone.js@0.6.26",
+      "resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.6.26.tgz"
+    }
+  }
+}

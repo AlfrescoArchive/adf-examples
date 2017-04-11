@@ -1,0 +1,52 @@
+<div class="mdl-grid">
+
+    <!-- Process panel. -->
+    <div class="mdl-cell mdl-cell--6-col mdl-shadow--2dp activiti-panel">
+
+        <h5>1. Creating processes</h5>
+
+        <activiti-apps
+            [layoutType]="'LIST'"
+            (appClick)="onAppClick($event)">
+        </activiti-apps>
+
+        <button
+            md-raised-button
+            data-automation-id="btn-start-process"
+            (click)="startingProcessClicked()">
+            <md-icon>add</md-icon> <span>CREATE PROCESS</span>
+        </button>
+
+        <div *ngIf="showActivitiStartProcess" class="space-top">
+            <activiti-start-process
+                [appId]="appId"
+                (start)="onStartProcessInstance($event)">
+            </activiti-start-process>
+        </div>
+
+    </div>
+
+    <!-- Task panel. -->
+    <div class="mdl-cell mdl-cell--6-col mdl-shadow--2dp activiti-panel">
+
+        <h5>2. Creating tasks</h5>
+
+        <div class="space-top">
+            <activiti-start-task
+                [appId]="appId"
+                (onSuccess)="onStartTaskSuccess($event)">
+            </activiti-start-task>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Dialog window. -->
+<dialog class="mdl-dialog" id="result-dialog" #dialogWindows>
+    <h4 class="mdl-dialog__title" id="start-task-dialog-title">Done!</h4>
+    <div class="mdl-dialog__content">{{resultMessage}}</div>
+    <div class="mdl-dialog__actions">
+        <button type="button" id="button-cancel" (click)="closeDialogWindows()" class="mdl-button close">Close</button>
+    </div>
+</dialog>
