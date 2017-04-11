@@ -40,9 +40,9 @@ ATTENTION: This script is recommended for development environment and not suited
 
 ## Screenshots
 
-Below a screenshot of the application as an example.
+Below some screenshots of the application as an example.
 
-TODO
+![Login page](public/img/screenshot.1.png)
 
 ## Feedback, issues or support
 
