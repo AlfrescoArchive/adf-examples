@@ -28,7 +28,7 @@ Once the prerequisites will be checked, follow the tasks below to run the applic
 npm install
 ```
 
-- Compile and run the application executing the command below. The command compiles and starts the project in watch mode (some errors with description 'npm ERR! peer dep missing...' may appear). Upon start, you can navigate to `http://localhost:3000` with your preferred browser. The browser will automatically reload upon changes to the source code.
+- Compile and run the application executing the command below. The command compiles and starts the project in watch mode (some errors with description `npm ERR! peer dep missing...` may appear). Upon start, you can navigate to `http://localhost:3000` with your preferred browser. The browser will automatically reload upon changes to the source code.
 
 ```sh
 npm start
