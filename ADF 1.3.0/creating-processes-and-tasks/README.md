@@ -34,7 +34,9 @@ npm install
 npm start
 ```
 
-- Once accessed to the new processes and tasks, you can choose to create a new process or create a new task. After creating one (or more) process and/or task, access to the Alfresco Process Services User Interface and check the new instances in the BPM System. Press the question mark icon on the top right of the web page, to view a helping description.
+- Accessing to the web aopplication, you will see there is only the `Task app` application and this means you don't have project models available and can only create new tasks. To create a new project model and publish it in a new App, you can see the [tutorial here](https://community.alfresco.com/docs/DOC-6627-activiti-components-in-action) for all the details.
+
+- Once new project models are created and published in a App, you can choose to create a new process or create a new task. After creating one (or more) process and/or task, access to the Alfresco Process Services User Interface and check the new instances in the BPM System. Press the question mark icon on the top right of the web page, to view a helping description.
 
 ATTENTION: This script is recommended for development environment and not suited for headless servers and network access.
 
