@@ -1,0 +1,55 @@
+<div class="mdl-layout mdl-js-layout">
+
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Logo. -->
+      <span class="mdl-layout-title"><img src="/public/img/alfresco.png" height="50px" /></span>
+      <!-- Add spacer, to align navigation to the right. -->
+      <div class="mdl-layout-spacer"></div>
+      <a id="help-button-id" class="mdl-navigation__link" (click)="toggleShowHelpingCard()"><i class="material-icons">help outline</i></a>
+      <div class="mdl-tooltip mdl-tooltip--large" data-mdl-for="help-button-id">Click here for a brief introduction to the application</div>
+    </div>
+  </header>
+
+  <!-- Left menu. -->
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">ADF Example</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" data-automation-id="home" href="" routerLink="/"><i class="material-icons">description</i> Repository</a>
+      <a class="mdl-navigation__link" (click)="onLogout($event)"><i class="material-icons">clear</i> Logout</a>
+      <a class="mdl-navigation__link" data-automation-id="about" href="" routerLink="/about"><i class="material-icons">info</i> About</a>
+      <a class="mdl-navigation__link" data-automation-id="settings" href="" routerLink="/settings"><i class="material-icons">settings</i> Settings</a>
+      <a class="mdl-navigation__link" (click)="toggleShowHelpingCard()"><i class="material-icons">help outline</i> Help</a>
+    </nav>
+  </div>
+
+  <!-- Content. -->
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <!-- Content. -->
+      <router-outlet></router-outlet>
+
+      <!-- Help. -->
+      <div *ngIf="showHelpingCard" class="mdl-card mdl-shadow--2dp helping-card">
+        <div class="mdl-card__title mdl-card--expand helping-card-title">
+          <h2 class="mdl-card__title-text">Help</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p>This is an example of ADF application defining custom actions for Alfresco Content Services.</p>
+          <p>The application assumes you have an Alfresco Content Services up an running.</p>
+          <p>Access to the repository explorer and select the right menu (the three vertical dots) and you'll see an action to select.
+             The action differs between folders and content.</p>
+          <p>If you click on the content action, the Share ID will be created for the content and it will be shown into the document list.</p>
+          <p>If you click on the folder action, a dummy action is executed.</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" (click)="toggleShowHelpingCard()">
+            Close
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</div>

@@ -1,0 +1,80 @@
+<div class="mdl-grid">
+
+    <!-- Document list panel. -->
+    <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+
+        <!-- Breadcrumb. -->
+        <alfresco-document-list-breadcrumb
+            [target]="documentList"
+            [folderNode]="documentList.folderNode">
+        </alfresco-document-list-breadcrumb>
+
+        <!-- Document list. -->
+        <alfresco-document-list
+            #documentList
+            [currentFolderId]="'-root-'"
+            [contentActions]="true"
+            [creationMenuActions]="false">
+
+            <!-- Empty folder message. -->
+            <empty-folder-content>
+                <template>
+                    <h4>&nbsp;The folder is empty.</h4>
+                </template>
+            </empty-folder-content>
+
+            <!-- Columns shown. -->
+            <content-columns>
+                <content-column
+                    key="$thumbnail" 
+                    type="image" 
+                    sortable="false"
+                    class="desktop-only">
+                </content-column>
+                <content-column
+                    title="Name"
+                    key="name"
+                    sortable="true">
+                </content-column>
+                <content-column
+                    title="Description"
+                    key="properties.cm:description"
+                    sortable="true"
+                    class="desktop-only full-width ellipsis-cell">
+                </content-column>
+                <content-column
+                    title="Share id"
+                    key="properties.qshare:sharedId"
+                    sortable="false"
+                    class="desktop-only">
+                </content-column>
+            </content-columns>
+
+            <!-- Actions. -->
+            <content-actions>
+                <content-action
+                    target="document"
+                    title="Get the Share ID"
+                    (execute)="contentAction($event)">
+                </content-action>
+                <content-action
+                    target="folder"
+                    title="Custom action"
+                    (execute)="folderAction($event)">
+                </content-action>
+            </content-actions>
+
+        </alfresco-document-list>
+
+    </div>
+
+</div>
+
+<!-- Dialog window. -->
+<dialog class="mdl-dialog" id="result-dialog" #dialogWindow>
+    <h4 class="mdl-dialog__title" id="start-task-dialog-title">{{resultTitle}}</h4>
+    <div class="mdl-dialog__content">{{resultMessage}}</div>
+    <div class="mdl-dialog__actions">
+        <button type="button" id="button-cancel" (click)="closeDialogWindow()" class="mdl-button close">Close</button>
+    </div>
+</dialog>
