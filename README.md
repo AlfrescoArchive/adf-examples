@@ -56,7 +56,7 @@ For further details about each project, check the `README` file containing the d
 
 We are always committed to enable developers improving the collection of ADF examples, but no guarantee can be given for a regular extension of the existing or new examples.
 If you cannot find your specific use case, please let us know raising a new issue or commenting an existing one. 
-Before opeining a new issue, please always check if one similar to your use case already exists.
+Before opening a new issue, please always check if one similar to your use case already exists.
 
 # How to receive support
 
