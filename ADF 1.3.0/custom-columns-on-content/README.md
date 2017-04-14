@@ -20,7 +20,7 @@ Before running the application, please check the assumptions listed below.
 
 Once the prerequisites will be checked, follow the tasks below to run the application.
 
-- Open a terminal and change the directory to be in the `custom-action-on-content` folder.
+- Open a terminal and change the directory to be in the `custom-columns-on-content` folder.
 
 - Install dependencies executing the command below. The execution of this command will require some time to be completed. If some warnings will appear into the terminal, don't worry.
 
