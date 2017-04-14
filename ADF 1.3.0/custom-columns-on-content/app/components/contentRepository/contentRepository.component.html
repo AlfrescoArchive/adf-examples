@@ -1,0 +1,85 @@
+<div class="mdl-grid">
+
+    <!-- Document list panel. -->
+    <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+
+        <!-- Breadcrumb. -->
+        <alfresco-document-list-breadcrumb
+            [target]="documentList"
+            [folderNode]="documentList.folderNode">
+        </alfresco-document-list-breadcrumb>
+
+        <!-- Document list. -->
+        <alfresco-document-list
+            #documentList
+            [currentFolderId]="'-root-'"
+            [contentActions]="false"
+            [creationMenuActions]="false">
+
+            <!-- Empty folder message. -->
+            <empty-folder-content>
+                <template>
+                    <h4>&nbsp;The folder is empty.</h4>
+                </template>
+            </empty-folder-content>
+
+            <!-- Columns shown. -->
+            <content-columns>
+
+                <!-- Icon. -->
+                <content-column
+                    key="$thumbnail" 
+                    type="image" 
+                    sortable="false"
+                    class="desktop-only">
+                </content-column>
+
+                <!-- Example of property: name. -->
+                <content-column
+                    title="Name"
+                    key="name"
+                    sortable="true">
+                </content-column>
+
+                <!-- Example of custom column including a property value. -->
+                <content-column
+                    title="Description"
+                    key="properties.cm:description"
+                    sortable="true"
+                    class="desktop-only full-width ellipsis-cell">
+                    <template let-context="$implicit">
+                        <span>Has been created from {{context.row.getValue('createdByUser.displayName')}}.</span>
+                    </template>
+                </content-column>
+
+                <!-- 
+                    Example of property with date type. 
+                    See https://angular.io/docs/ts/latest/api/common/index/DatePipe-pipe.html for format syntax.
+                -->
+                <content-column
+                    title="Date of creation"
+                    key="createdAt"
+                    type="date"
+                    format="yMMMMEEEEd"
+                    sortable="true"
+                    class="desktop-only">
+                </content-column>
+
+                <!-- Tag list. -->
+                <content-column
+                    title="{{'DOCUMENT_LIST.COLUMNS.TAG' | translate}}"
+                    key="id"
+                    sortable="true"
+                    class="desktop-only">
+                    <template let-entry="$implicit">
+                        <alfresco-tag-node-list [nodeId]="entry.data.getValue(entry.row, entry.col)"></alfresco-tag-node-list>
+                    </template>
+                </content-column>  
+
+            </content-columns>
+
+        </alfresco-document-list>
+
+    </div>
+
+</div>
