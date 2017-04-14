@@ -6,7 +6,7 @@ This repository contains a collection of examples of simple (and less simple) pr
 
 The goal of the repository is to provide working source code as an example, and some useful components to be used as inspiration for your use cases and custom applications.
 The idea is to enable developers, sharing some best practices and useful tips to reduce the learning curve and the time to market of your artifacts.
-We are committed to increase this collection of projects in number and complexity during, to give you the a practical place where to find working examples to start (or experiment) your development.
+We are committed to increase this collection of projects in number and complexity during the near future, to give you the a practical place where to find working examples to start (or experiment) your development.
 
 # Introduction to the Alfresco ADF
 
