@@ -21,7 +21,7 @@ For further details about the Alfresco ADF, below you can find some useful links
 # About the structure of the repository
 
 For a better understanding, the structure of the repository is organized by Alfresco ADF version.
-Each example is organized as an indipendent project and named as much clear as possibile, to introduce the main topic covered.
+Each example is organized as an independent project and named as much clear as possibile, to introduce the main topic covered.
 Each project contains at least a `README` file introducing the use case, the enviornment, the used versions and prerequisites in general.
 Below an example of repository structure, representing the two levels: the Alfresco ADF version and the projects.
 ```
