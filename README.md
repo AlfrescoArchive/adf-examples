@@ -38,7 +38,7 @@ Below an example of repository structure, representing the two levels: the Alfre
     |-- ...
 ```
 
-To view the full list of examples related to an Alfresco ADF version, click on the folder of the repository.
+To view the full list of examples related to an Alfresco ADF version, click on the folder named like the ADF version.
 
 # Where to start
 
