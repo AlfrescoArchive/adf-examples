@@ -6,7 +6,7 @@
 
 ## Solution Architecture
 This ADF application is built as a component ("ADF Application") in the below solution diagram. This is a typical solution architecture that is found in a lot of enterprises.
-![alt tag]( https://github.com/cijujoseph/activiti-examples/blob/master/adf-samples/insurance-policy-and-claim-center-app/demo-resources/Architecture.png )
+![alt tag]( https://github.com/Alfresco/adf-examples/blob/master/ADF%201.5.0/insurance-policy-and-claim-center-app/demo-resources/Architecture.png )
 Components in the architecture are:
 * ADF Application: End user facing application that can be built very quickly using the Alfresco Application Development Framework on top of all the following components in an enterprise.
 * Alfresco Process Services: Platform to model and run the business processes.
