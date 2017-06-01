@@ -1,0 +1,6 @@
+<div>
+  <div>{{field.name}}</div>
+  <br>
+  <app-tiny-editor [elementId]="field.id" [contentValue]="field.value" (onEditorContentChange)="keyupHandler($event)">
+  </app-tiny-editor>
+</div>
