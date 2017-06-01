@@ -60,7 +60,7 @@ Below some screenshots of the application as an example.
 
 ## Feedback, issues or support
 
-For feedback, issues or simply to request support, che the introduction [introduction](https://github.com/Alfresco/adf-examples) for further details.
+For feedback, issues or simply to request support, check the introduction [introduction](https://github.com/Alfresco/adf-examples) for further details.
 
 ## Disclaimer
 
