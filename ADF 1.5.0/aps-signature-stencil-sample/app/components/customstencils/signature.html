@@ -1,0 +1,19 @@
+<div>
+    <div>{{field.name}}</div>
+    <br>
+    <div style="border:1px solid black">
+        <signature-pad [options]="signaturePadOptions" accept="sign" clear="clear" height="220" width="568"></signature-pad>
+    </div>
+    <br>
+    <button _ngcontent-rmr-25="" (click)="clear()" alfresco-mdl-button="" class="mdl-button mdl-js-button mdl-js-ripple-effect"
+        data-upgraded=",MaterialButton,MaterialRipple">
+        Clear signature
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 155.386px; height: 155.386px; transform: translate(-50%, -50%) translate(46px, 10px);"></span></span>
+    </button>
+
+    <button _ngcontent-rmr-25="" (click)="sign()" alfresco-mdl-button="" class="mdl-button mdl-js-button mdl-js-ripple-effect"
+        data-upgraded=",MaterialButton,MaterialRipple">
+        Sign
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 155.386px; height: 155.386px; transform: translate(-50%, -50%) translate(46px, 10px);"></span></span>
+    </button>
+</div>

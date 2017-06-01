@@ -1,0 +1,37 @@
+<!-- Always shows a header, even in smaller screens. -->
+<div mdl class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header main_header_adf" [ngClass]="{hide: isAPageWithHeaderBar()}">
+    <div class="mdl-button-padding mdl-layout__header-row">
+
+      <!-- Title -->
+      <span class="mdl-layout-title">APS Signature Stencil Demo</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" data-automation-id="home" href="" routerLink="/my-tasks">My Tasks</a>
+        <a class="mdl-navigation__link" data-automation-id="activiti" href="" routerLink="/new-request">Start New Process</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="mdl-layout__drawer">
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="" routerLink="/my-tasks" (click)="hideDrawer()"><i class="material-icons home--card__icon">assignment</i>&nbsp;&nbsp; My Tasks</a>
+      <a class="mdl-navigation__link" href="" routerLink="/new-request" (click)="hideDrawer()"><i class="material-icons home--card__icon">add_circle</i>&nbsp;&nbsp; Start New Process</a>
+    </nav>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" (click)="onLogout($event)">
+        <label tabindex="0"><i class="material-icons home--card__icon" >exit_to_app</i>&nbsp;&nbsp;&nbsp;&nbsp; Logout</label>
+      </a>
+    </nav>
+  </div>
+
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
