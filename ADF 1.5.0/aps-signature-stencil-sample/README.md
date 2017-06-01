@@ -38,7 +38,7 @@ npm start
 
 - Log into the application using your Alfresco Process Services credentials and you should see any open tasks via "My Tasks" component. You should now also be able to start any processes that you have access via "Start New Process" tab/link in the ADF application.
 
-- Let's now test the signature component. Inoder to do that that please import the [Process Application](https://github.com/cijujoseph/activiti-examples/blob/master/stencil-samples/signature-pad-stencil/SignaturePad.zip) into your Alfresco Process Services and publish the application using the Alfresco Process Services UI. This step will deploy a couple of processes where the signaturepad component is utilized on both start and task forms using the "stencil" feature in Alfresco Process Services. Run these newly deployed process via this ADF app which will render those signaturepad components correctly.
+- **Let's now test the signature component. In order to do that that please import the [Process Application](https://github.com/cijujoseph/activiti-examples/blob/master/stencil-samples/signature-pad-stencil/SignaturePad.zip) into your Alfresco Process Services and publish the application using the Alfresco Process Services UI. This step will deploy a couple of processes where the signaturepad component is utilized on both start and task forms using the "stencil" feature in Alfresco Process Services. Run these newly deployed process via this ADF app which will render those signaturepad components correctly.**
 
 ## Screenshots
 
