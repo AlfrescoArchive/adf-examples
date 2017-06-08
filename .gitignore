@@ -5,3 +5,4 @@ workspace.xml
 dist/
 coverage/
 *.npmrc
+versions.json

@@ -1,6 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { AlfrescoApiService } from 'ng2-alfresco-core';
-import { DocumentListComponent } from 'ng2-alfresco-documentlist';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'contentRepository-component',
