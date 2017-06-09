@@ -8,6 +8,7 @@ import { DocumentListModule } from 'ng2-alfresco-documentlist';
 import { TagModule } from 'ng2-alfresco-tag';
 import { AppComponent } from './app.component';
 import { routing } from './app.routes';
+import { MaterialModule } from '@angular/material';
 
 import {
   LoginDemoComponent,
@@ -24,7 +25,8 @@ import {
         DataTableModule.forRoot(),
         LoginModule.forRoot(),
         DocumentListModule.forRoot(),
-        TagModule
+        TagModule,
+        MaterialModule.forRoot()
     ],
     declarations: [
         AppComponent,

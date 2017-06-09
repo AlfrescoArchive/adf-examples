@@ -88,14 +88,14 @@ module.exports = webpackMerge(commonConfig, {
         // Copy asstes folders for all modules with ng2-activiti- prefix
         {
             context: 'node_modules',
-            from: 'ng2-activiti-*/src/assets/images/*.*',
+            from: 'ng2-activiti-*/bundles/assets/images/*.*',
             to: 'assets/images',
             flatten : true
         },
         // Copy asstes folders for all modules with ng2-alfresco- prefix
         {
             context: 'node_modules',
-            from: 'ng2-alfresco-*/src/assets/images/*.*',
+            from: 'ng2-alfresco-*/bundles/assets/images/*.*',
             to: 'assets/images',
             flatten : true
         }
