@@ -26,14 +26,23 @@ Components in the architecture are:
 	elastic-search.enable.http=true
 	elastic-search.enable.http.cors=true
 	```
-3. Deploy the "activiti-custom-data-model-sample-1.0.0-SNAPSHOT.jar" available in this project to activiti-app/WEB-INF/lib. This is the implementation library of the above mentioned custom data model.
-4. Import the following forms into your APS instance. These forms are used in the ADF application to display the records from the System of Record (Elasticsearch).
+3. Please ensure that you also have the following properties configured in your activtiti-app.properties file. For more details on these config please refer the [Process Services Docs](http://docs.alfresco.com/process-services1.6/concepts/welcome.html)
+	```
+	validator.editor.bpmn.disable.scripttask=false
+	validator.editor.bpmn.disable.scripttask.groovy=false
+	javascript.secure-scripting.enabled=false
+	beans.whitelisting.enabled=false
+	el.whitelisting.enabled=false
+	```
+
+4. Deploy the "activiti-custom-data-model-sample-1.0.0-SNAPSHOT.jar" available in this project to activiti-app/WEB-INF/lib. This is the implementation library of the above mentioned custom data model.
+5. Import the following forms into your APS instance. These forms are used in the ADF application to display the records from the System of Record (Elasticsearch).
 	 
 	 > demo-resources/Insurance_Form_ADF.json
 	 
 	 > demo-resources/Property Claim - ADF.json
 
-5. Update the insurance-demo-adf-app/environments/environment.ts file with your environment details. Please find below the explanation of the properties used in this file
+6. Update the insurance-demo-adf-app/environments/environment.ts file with your environment details. Please find below the explanation of the properties used in this file
 	
 	 > providers: Use 'BPM' if you donot have ACS installed and configured to work with APS. If both ACS and APS are available, use 'ALL'
   	
@@ -53,14 +62,14 @@ Components in the architecture are:
   	 
 	 > processAppId: The Runtime ID of the imported (step 1) "InsuranceProcessSuite" process application. Check the URL by clicking on "APS Home Page -> "InsuranceProcessSuite"->Check url for the App ID
 	
-6. Start the ADF application by executing the following commands.
+7. Start the ADF application by executing the following commands.
 	```
 	cd insurance-demo-adf-app
 	npm install
 	npm start
 	```
-7. Create a group called "admin-group" in APS->Identity Management->Organization and add a user to this group.
-8. Access the ADF app by going to http://localhost:3000.
+8. Create a group called "admin-group" in APS->Identity Management->Organization and add a user to this group.
+9. Access the ADF app by going to http://localhost:3000.
 
 ## Demo App Highlights
 1. Mobile friendly app!
