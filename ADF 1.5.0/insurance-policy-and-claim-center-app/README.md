@@ -34,6 +34,7 @@ Components in the architecture are:
 	beans.whitelisting.enabled=false
 	el.whitelisting.enabled=false
 	```
+	Also, please ensure that groovy and javascript are uncommented in the file named whitelisted-scripts.conf in classes/activiti folder
 
 4. Deploy the "activiti-custom-data-model-sample-1.0.0-SNAPSHOT.jar" available in this project to activiti-app/WEB-INF/lib. This is the implementation library of the above mentioned custom data model.
 5. Import the following forms into your APS instance. These forms are used in the ADF application to display the records from the System of Record (Elasticsearch).
