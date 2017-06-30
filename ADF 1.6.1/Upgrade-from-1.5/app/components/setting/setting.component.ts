@@ -34,8 +34,8 @@ export class SettingComponent implements AfterViewChecked {
     constructor(private settingsService: AlfrescoSettingsService,
                 private storage: StorageService,
                 private logService: LogService) {
-        this.ecmHost = this.settingsService.ecmHost;
-        this.bpmHost = this.settingsService.bpmHost;
+        this.ecmHost = storage.getItem('ecmHost') || this.settingsService.ecmHost;
+        this.bpmHost = storage.getItem('bpmHost') || this.settingsService.bpmHost;        
     }
 
     ngAfterViewChecked() {
@@ -50,7 +50,6 @@ export class SettingComponent implements AfterViewChecked {
         if (value && this.isValidUrl(value)) {
             this.logService.info(`ECM host: ${value}`);
             this.ecmHost = value;
-            this.settingsService.ecmHost = value;
             this.storage.setItem(`ecmHost`, value);
         } else {
             console.error('Ecm address does not match the pattern');
@@ -62,7 +61,6 @@ export class SettingComponent implements AfterViewChecked {
         if (value && this.isValidUrl(value)) {
             this.logService.info(`BPM host: ${value}`);
             this.bpmHost = value;
-            this.settingsService.bpmHost = value;
             this.storage.setItem(`bpmHost`, value);
         } else {
             console.error('Bpm address does not match the pattern');

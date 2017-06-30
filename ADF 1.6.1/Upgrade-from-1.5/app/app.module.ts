@@ -52,11 +52,18 @@ import {
   SettingComponent
 } from './components/index';
 
+let appConfigFile = 'app.config-dev.json';
+if (process.env.ENV === 'production') {
+    appConfigFile = 'app.config-prod.json';
+}
+
 @NgModule({
     imports: [
         BrowserModule,
         routing,
-        CoreModule.forRoot(),
+        CoreModule.forRoot({
+            appConfigFile: appConfigFile
+        }),
         DataTableModule.forRoot(),
         SearchModule.forRoot(),
         
