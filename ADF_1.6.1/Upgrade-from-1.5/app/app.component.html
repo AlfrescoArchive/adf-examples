@@ -1,0 +1,74 @@
+<!-- Always shows a header, even in smaller screens. -->
+<div mdl class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header main_header_adf" [ngClass]="{hide: isAPageWithHeaderBar()}">
+    <div class="mdl-button-padding mdl-layout__header-row">
+
+      
+      <div>
+        <ng2-alfresco-userinfo class="user-profile" [menuOpenType]="left">
+        </ng2-alfresco-userinfo>
+      </div>
+      
+
+      <!-- Title -->
+      <span class="mdl-layout-title">Demo Application</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+
+      
+      <!-- Search bar -->
+      <search-bar (expand)="onToggleSearch($event)"></search-bar>
+      
+
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" data-automation-id="home" href="" routerLink="/">Home</a>
+        <a class="mdl-navigation__link" data-automation-id="files" href="" routerLink="/files">DocumentList</a>
+        <a class="mdl-navigation__link" data-automation-id="activiti" href="" routerLink="/activiti">Process Services</a>
+        <a class="mdl-navigation__link" data-automation-id="login" href="" routerLink="/login">Login</a>
+        <a class="mdl-navigation__link" data-automation-id="settings" href="" routerLink="/settings">Settings</a>
+      </nav>
+
+    </div>
+  </header>
+
+  
+  <div class="mdl-layout__drawer">
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" (click)="onLogout($event)">
+        <label tabindex="0">Logout</label>
+      </a>
+    </nav>
+    <span class="mdl-layout-title">Languages</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" (click)="changeLanguage('en')">
+        <span class="flag-icon flag-icon-gb"></span>
+        <label tabindex="0"> English</label>
+      </a>
+      <a class="mdl-navigation__link" (click)="changeLanguage('it')">
+        <span class="flag-icon flag-icon-it"></span>
+        <label tabindex="0"> Italian</label>
+      </a>
+      <a class="mdl-navigation__link" (click)="changeLanguage('ru')">
+        <span class="flag-icon flag-icon-ru"></span>
+        <label tabindex="0"> Russian</label>
+      </a>
+    </nav>
+    <span class="mdl-layout-title">Components</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="" routerLink="/" (click)="hideDrawer()">Home</a>
+      <a class="mdl-navigation__link" href="" routerLink="/files" (click)="hideDrawer()">DocumentList</a>
+      <a class="mdl-navigation__link" href="" routerLink="/login" (click)="hideDrawer()">Login</a>
+      <a class="mdl-navigation__link" href="" routerLink="/activiti" (click)="hideDrawer()">Process Services</a>
+      <a class="mdl-navigation__link" href="" routerLink="/about" (click)="hideDrawer()">About</a>
+      <a class="mdl-navigation__link" href="" routerLink="/settings" (click)="hideDrawer()">Settings</a>
+    </nav>
+  </div>
+  
+
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
