@@ -26,38 +26,14 @@
                     [creationMenuActions]="true"
                     (error)="onNavigationError($event)"
                     (success)="resetError()"
-                    (preview)="showFile($event)">
+                    (preview)="sentimentAction($event)">
                     <data-columns>
                         <data-column key="$thumbnail" type="image" [sortable]="false"></data-column>
                         <data-column
                             title="{{'DOCUMENT_LIST.COLUMNS.DISPLAY_NAME' | translate}}"
                             key="name"
                             class="full-width ellipsis-cell">
-
-                            <!-- Example #1: using custom template with implicit access to data context -->
-                            <!--
-                            <template let-entry="$implicit">
-                                <span>Hi! {{entry.data.getValue(entry.row, entry.col)}}</span>
-                            </template>
-                            -->
-
-                            <!-- Example #2: using custom template with value access -->
-                            <!--
-                            <template let-value="value">
-                                <span>Hi! {{value}}</span>
-                            </template>
-                            -->
-
                         </data-column>
-                        <!--<data-column-->
-                            <!--title="{{'DOCUMENT_LIST.COLUMNS.TAG' | translate}}"-->
-                            <!--key="id"-->
-                            <!--class="full-width ellipsis-cell">-->
-                            <!--<template let-entry="$implicit">-->
-                                <!--<alfresco-tag-node-list-->
-                                    <!--[nodeId]="entry.data.getValue(entry.row, entry.col)"></alfresco-tag-node-list>-->
-                            <!--</template>-->
-                        <!--</data-column>-->
                         <data-column
                             title="{{'DOCUMENT_LIST.COLUMNS.CREATED_BY' | translate}}"
                             key="createdByUser.displayName"

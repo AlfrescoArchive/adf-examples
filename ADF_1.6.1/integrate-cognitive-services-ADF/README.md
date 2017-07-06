@@ -30,10 +30,31 @@ By default the configuration files have the content similar to the following one
 }
 ```
 
-
 ## How to start the project 
 
 In order to correct import the app and configure the process service and the content service you can refer to [this article](https://community.alfresco.com/people/eugenio_romano/blog/2017/07/04/move-content-service-file-in-a-folder-with-the-process-service)
+
+### Register and create an account to use the cognitive services
+
+Register on the microsoft website and create two kye for:
+
+- Computer vision API
+- Sentiment analysis API
+
+Once you have your keys replace them in the app.config-prod.json:
+
+```javascript
+{
+    "ecmHost": "http://{hostname}:{port}/ecm",
+    "bpmHost": "http://{hostname}:{port}/bpm",
+    "application": {
+        "name": "Integration ADF cognitive service between CS and PS"
+    },
+    "keySentiment": "YOUR_KEY_SENTIMENT",
+    "keyVision": "YOUR_KEY_VISION"
+}
+
+```
 
 ### Configure Process Service app 
 

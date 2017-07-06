@@ -33,8 +33,7 @@ export class TextAnalyticsService {
     urlService: String = 'https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/';
 
     constructor(private  http: Http, private apiService: AlfrescoApiService, private logService: LogService, private appConfigService: AppConfigService, private alfrescoContentService: AlfrescoContentService) {
-        this.key = <String>this.appConfigService.get('key');
-        console.log(' this.key' + this.key);
+        this.key = <String>this.appConfigService.get('keySentiment');
     }
 
     getContentNode(nodeId) {

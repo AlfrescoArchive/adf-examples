@@ -75,7 +75,7 @@ export class FilesComponent implements OnInit {
                 @Optional() private route: ActivatedRoute) {
     }
 
-    showFile(event) {
+    sentimentAction(event) {
         this.fileShowed = false;
 
         if (event.value.entry.isFile) {

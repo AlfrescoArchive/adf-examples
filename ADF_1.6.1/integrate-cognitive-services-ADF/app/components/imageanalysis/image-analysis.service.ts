@@ -32,7 +32,7 @@ export class ImageAnalyticsService {
     urlService: String = 'https://westus.api.cognitive.microsoft.com/vision/v1.0/ocr?language=unk&detectOrientation=true';
 
     constructor(private  http: Http, private apiService: AlfrescoApiService, private logService: LogService, private appConfigService: AppConfigService) {
-        this.key = <String>this.appConfigService.get('key');
+        this.key = <String>this.appConfigService.get('keyVision');
     }
 
     getContentNode(nodeId) {
