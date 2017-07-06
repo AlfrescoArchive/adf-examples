@@ -35,7 +35,7 @@ npm start
 
 Below some screenshots of the application as an example.
 
-![Home page](public/doc/datatable.png)
+![Home page](doc/datatable.png)
 
 ## Feedback, issues or support
 
