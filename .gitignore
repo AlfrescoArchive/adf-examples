@@ -7,3 +7,5 @@ typings
 !browser-sync-config.js
 .iml
 /adf-examples.iml
+.happypack/
+.ebextensions/

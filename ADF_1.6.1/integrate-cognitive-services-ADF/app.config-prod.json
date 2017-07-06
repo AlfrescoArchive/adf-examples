@@ -1,0 +1,8 @@
+{
+    "ecmHost": "http://{hostname}",
+    "bpmHost": "http://{hostname}",
+    "application": {
+        "name": "Integration ADF cognitive service between CS and PS"
+    },
+    "key": ""
+}

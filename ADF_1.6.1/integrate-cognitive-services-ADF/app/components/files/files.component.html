@@ -1,0 +1,156 @@
+<alfresco-upload-button #uploadButton
+                        data-automation-id="multiple-file-upload"
+                        [rootFolderId]="documentList.currentFolderId"
+                        [multipleFiles]="multipleFileUpload"
+                        [uploadFolders]="folderUpload"
+                        [versioning]="versioning">
+    <div class="mdl-spinner mdl-js-spinner is-active"></div>
+</alfresco-upload-button>
+
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+        <div class="container" class="adf-document-list">
+            <alfresco-upload-drag-area
+                [rootFolderId]="documentList.currentFolderId"
+                [versioning]="versioning">
+                <alfresco-document-list-breadcrumb
+                    [target]="documentList"
+                    [folderNode]="documentList.folderNode">
+                </alfresco-document-list-breadcrumb>
+                <alfresco-document-list
+                    #documentList
+                    [currentFolderId]="currentFolderId"
+                    [contextMenuActions]="true"
+                    [contentActions]="true"
+                    [allowDropFiles]="true"
+                    [creationMenuActions]="true"
+                    (error)="onNavigationError($event)"
+                    (success)="resetError()"
+                    (preview)="showFile($event)">
+                    <data-columns>
+                        <data-column key="$thumbnail" type="image" [sortable]="false"></data-column>
+                        <data-column
+                            title="{{'DOCUMENT_LIST.COLUMNS.DISPLAY_NAME' | translate}}"
+                            key="name"
+                            class="full-width ellipsis-cell">
+
+                            <!-- Example #1: using custom template with implicit access to data context -->
+                            <!--
+                            <template let-entry="$implicit">
+                                <span>Hi! {{entry.data.getValue(entry.row, entry.col)}}</span>
+                            </template>
+                            -->
+
+                            <!-- Example #2: using custom template with value access -->
+                            <!--
+                            <template let-value="value">
+                                <span>Hi! {{value}}</span>
+                            </template>
+                            -->
+
+                        </data-column>
+                        <!--<data-column-->
+                            <!--title="{{'DOCUMENT_LIST.COLUMNS.TAG' | translate}}"-->
+                            <!--key="id"-->
+                            <!--class="full-width ellipsis-cell">-->
+                            <!--<template let-entry="$implicit">-->
+                                <!--<alfresco-tag-node-list-->
+                                    <!--[nodeId]="entry.data.getValue(entry.row, entry.col)"></alfresco-tag-node-list>-->
+                            <!--</template>-->
+                        <!--</data-column>-->
+                        <data-column
+                            title="{{'DOCUMENT_LIST.COLUMNS.CREATED_BY' | translate}}"
+                            key="createdByUser.displayName"
+                            class="desktop-only">
+                        </data-column>
+                        <data-column
+                            title="{{'DOCUMENT_LIST.COLUMNS.CREATED_ON' | translate}}"
+                            key="createdAt"
+                            type="date"
+                            format="medium"
+                            class="desktop-only">
+                        </data-column>
+                    </data-columns>
+
+                    <content-actions>
+                        <!-- folder actions -->
+                        <content-action
+                            target="folder"
+                            title="{{'DOCUMENT_LIST.ACTIONS.FOLDER.SYSTEM_1' | translate}}"
+                            handler="system1">
+                        </content-action>
+                        <content-action
+                            target="folder"
+                            title="{{'DOCUMENT_LIST.ACTIONS.FOLDER.CUSTOM' | translate}}"
+                            (execute)="myFolderAction1($event)">
+                        </content-action>
+                        <content-action
+                            target="folder"
+                            permission="delete"
+                            [disableWithNoPermission]="true"
+                            title="{{'DOCUMENT_LIST.ACTIONS.FOLDER.DELETE' | translate}}"
+                            (permissionEvent)="onPermissionsFailed($event)"
+                            handler="delete">
+                        </content-action>
+                        <!-- document actions -->
+                        <content-action
+                            target="document"
+                            title="{{'DOCUMENT_LIST.ACTIONS.DOCUMENT.DOWNLOAD' | translate}}"
+                            handler="download">
+                        </content-action>
+                        <content-action
+                            target="document"
+                            title="{{'DOCUMENT_LIST.ACTIONS.DOCUMENT.SYSTEM_2' | translate}}"
+                            handler="system2">
+                        </content-action>
+                        <content-action
+                            target="document"
+                            title="{{'DOCUMENT_LIST.ACTIONS.DOCUMENT.CUSTOM' | translate}}"
+                            (execute)="myCustomAction1($event)">
+                        </content-action>
+                        <content-action
+                            target="document"
+                            permission="delete"
+                            [disableWithNoPermission]="true"
+                            (permissionEvent)="onPermissionsFailed($event)"
+                            title="{{'DOCUMENT_LIST.ACTIONS.DOCUMENT.DELETE' | translate}}"
+                            handler="delete">
+                        </content-action>
+                        <content-action
+                            target="folder"
+                            title="Activiti: View Form"
+                            (execute)="viewActivitiForm($event)">
+                        </content-action>
+                    </content-actions>
+                </alfresco-document-list>
+            </alfresco-upload-drag-area>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <div *ngIf="fileShowed">
+            <text-analysis *ngIf="mimeType === 'text/plain'" [nodeId]="fileNodeId"></text-analysis>
+            <image-analysis *ngIf="mimeType === 'image/jpeg'" [nodeId]="fileNodeId"></image-analysis>
+        </div>
+    </div>
+</div>
+
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col">
+        <div *ngIf="fileShowed">
+            <alfresco-viewer [(showViewer)]="fileShowed"
+                             [fileNodeId]="fileNodeId"
+                             [overlayMode]="false">
+            </alfresco-viewer>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+        <div *ngIf="fileShowed">
+            <activiti-start-process appId="1" [variables]="inputProcessVariable"></activiti-start-process>
+        </div>
+    </div>
+</div>
+
+
+<context-menu-holder></context-menu-holder>
+
+<file-uploading-dialog #fileDialog></file-uploading-dialog>
