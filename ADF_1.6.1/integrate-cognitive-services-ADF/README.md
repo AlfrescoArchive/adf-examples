@@ -39,7 +39,7 @@ In order to correct import the app and configure the process service and the con
 Register on the microsoft website and create two kye for:
 
 - Computer vision API
-- Sentiment analysis API
+- Text Analytics API
 
 Once you have your keys replace them in the app.config-prod.json:
 
@@ -66,6 +66,9 @@ Configure the content service endpoint as explained [here](https://community.alf
  
 
 ### Configure Content Service Metadata
+
+Configure the content service metadata model as explained [here](https://community.alfresco.com/people/eugenio_romano/blog/2017/07/04/move-content-service-file-in-a-folder-with-the-process-service)
+
 
 ```sh
 npm start
