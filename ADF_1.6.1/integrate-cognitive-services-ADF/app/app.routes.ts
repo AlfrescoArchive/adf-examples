@@ -20,8 +20,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard, AuthGuardEcm } from 'ng2-alfresco-core';
 
 import {
-    HomeComponent,
-    FilesComponent,
+    SentimentComponent,
     LoginDemoComponent,
     SettingsComponent
 } from './components/index';
@@ -30,22 +29,17 @@ export const appRoutes: Routes = [
     { path: 'login', component: LoginDemoComponent },
     {
         path: '',
-        component: HomeComponent,
+        component: SentimentComponent,
         canActivate: [AuthGuard]
     },
     {
-        path: 'home',
-        component: HomeComponent,
-        canActivate: [AuthGuard]
-    },
-    {
-        path: 'files',
-        component: FilesComponent,
+        path: 'sentiment',
+        component: SentimentComponent,
         canActivate: [AuthGuardEcm]
     },
     {
-        path: 'files/:id',
-        component: FilesComponent,
+        path: 'sentiment/:id',
+        component: SentimentComponent,
         canActivate: [AuthGuardEcm]
     },
     { path: 'settings', component: SettingsComponent }

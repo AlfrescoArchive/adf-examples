@@ -26,11 +26,11 @@ import { RestVariable } from 'alfresco-js-api';
 import { CreateFolderDialog } from '../../dialogs/create-folder.dialog';
 
 @Component({
-    selector: 'files-component',
-    templateUrl: './files.component.html',
-    styleUrls: ['./files.component.css']
+    selector: 'sentiment-component',
+    templateUrl: './sentiment.component.html',
+    styleUrls: ['./sentiment.component.css']
 })
-export class FilesComponent implements OnInit {
+export class SentimentComponent implements OnInit {
     // The identifier of a node. You can also use one of these well-known aliases: -my- | -shared- | -root-
     currentFolderId: string = '-my-';
 

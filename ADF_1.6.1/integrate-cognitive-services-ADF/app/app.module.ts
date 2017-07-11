@@ -39,9 +39,8 @@ import { CreateFolderDialog } from './dialogs/create-folder.dialog';
 import { DebugAppConfigService } from './services/debug-app-config.service';
 
 import {
-    HomeComponent,
     LoginDemoComponent,
-    FilesComponent,
+    SentimentComponent,
     SettingsComponent,
     TextAnalysisComponent,
     ImageAnalysisComponent
@@ -73,9 +72,8 @@ if (process.env.ENV === 'production') {
     ],
     declarations: [
         AppComponent,
-        HomeComponent,
         LoginDemoComponent,
-        FilesComponent,
+        SentimentComponent,
         CreateFolderDialog,
         SettingsComponent,
         TextAnalysisComponent,

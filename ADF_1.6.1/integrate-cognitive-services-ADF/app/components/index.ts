@@ -15,9 +15,8 @@
  * limitations under the License.
  */
 
-export { HomeComponent } from './home/home.component';
 export { LoginDemoComponent } from './login/login-demo.component';
-export { FilesComponent } from './files/files.component';
+export { SentimentComponent } from './sentiment/sentiment.component';
 export { SettingsComponent } from './settings/settings.component';
 export { TextAnalysisComponent } from './textanalysis/text-analysis.component';
 export { ImageAnalysisComponent } from './imageanalysis/image-analysis.component';
