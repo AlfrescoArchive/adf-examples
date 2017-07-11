@@ -45,11 +45,6 @@ Once you have your keys replace them in the app.config-prod.json:
 
 ```javascript
 {
-    "ecmHost": "http://{hostname}:{port}/ecm",
-    "bpmHost": "http://{hostname}:{port}/bpm",
-    "application": {
-        "name": "Integration ADF cognitive service between CS and PS"
-    },
     "keySentiment": "YOUR_KEY_SENTIMENT",
     "keyVision": "YOUR_KEY_VISION"
 }
@@ -64,6 +59,14 @@ The first step that you need to do to make this project works is to install the 
                
 Configure the content service endpoint as explained [here](https://community.alfresco.com/people/eugenio_romano/blog/2017/07/04/move-content-service-file-in-a-folder-with-the-process-service)
  
+
+Once you have your published your app in the PS get the ID of the app and  replace them in the app.config-prod.json:
+```javascript
+{
+  "appId": "1001"
+}
+
+```
 
 ### Configure Content Service Metadata
 

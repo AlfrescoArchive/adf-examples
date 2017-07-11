@@ -18,7 +18,7 @@
 import { Component, Input, OnInit, Optional, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { MdDialog } from '@angular/material';
-import { AlfrescoContentService, FolderCreatedEvent, NotificationService } from 'ng2-alfresco-core';
+import { AlfrescoContentService, FolderCreatedEvent, NotificationService, AppConfigService } from 'ng2-alfresco-core';
 import { DocumentListComponent } from 'ng2-alfresco-documentlist';
 import { UploadService, FileUploadCompleteEvent } from 'ng2-alfresco-upload';
 import { MinimalNodeEntryEntity } from 'alfresco-js-api';
@@ -67,12 +67,16 @@ export class SentimentComponent implements OnInit {
 
     inputProcessVariable: RestVariable[] = null;
 
+    appId: string;
+
     constructor(private changeDetector: ChangeDetectorRef,
                 private notificationService: NotificationService,
                 private uploadService: UploadService,
                 private contentService: AlfrescoContentService,
                 private dialog: MdDialog,
-                @Optional() private route: ActivatedRoute) {
+                @Optional() private route: ActivatedRoute,
+                private appConfigService: AppConfigService) {
+        this.appId = <String>this.appConfigService.get('appId');
     }
 
     sentimentAction(event) {

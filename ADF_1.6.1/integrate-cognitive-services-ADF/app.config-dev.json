@@ -5,5 +5,6 @@
         "name": "Integration ADF cognitive service between CS and PS"
     },
     "keySentiment": "8e665e26a925435f8b56e0fa85486f28",
-    "keyVision": "ad81381399f945b1b6c2a516d9dbb525"
+    "keyVision": "ad81381399f945b1b6c2a516d9dbb525",
+    "appId": "1001"
 }

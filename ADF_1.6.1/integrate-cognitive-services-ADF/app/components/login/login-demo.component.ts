@@ -73,7 +73,7 @@ export class LoginDemoComponent implements OnInit {
     }
 
     onLogin($event) {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/sentiment']);
     }
 
     onError($event) {
