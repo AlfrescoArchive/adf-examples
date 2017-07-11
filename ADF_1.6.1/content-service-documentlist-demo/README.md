@@ -1,4 +1,4 @@
-# DocumentList demo (ADF 1.6.1 example)
+# Content Service Document List demo (ADF 1.6.1 example)
 
 This project is part of the [Alfresco Application Developer Framework](https://github.com/Alfresco/alfresco-ng2-components) collection of examples.
 For further details about the repository and all the available examples please check the [introduction](https://github.com/Alfresco/adf-examples).
