@@ -48,7 +48,7 @@ For feedback, issues or simply to request support, che the introduction [introdu
 
 ## Disclaimer
 
-All the content available in this tutorial has been developed and tested using Alfresco ADF v1.3.0 LA release, NodeJs 6.10.0 on a Linux Ubuntu 16.04.01 LTS as Operating System.
+All the content available in this tutorial has been developed and tested using Alfresco ADF v1.6.1 LA release, NodeJs 6.10.2 on a Linux Ubuntu 16.04.01 LTS as Operating System.
 Each variation to the listed versions and tools could affect the success of the execution, even if the involved technologies and tasks have been defined to be as more general as possible, not related to any specific context or platform.
 
 ## License
