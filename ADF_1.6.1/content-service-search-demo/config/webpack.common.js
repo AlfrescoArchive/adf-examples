@@ -122,11 +122,33 @@ module.exports = {
 
     devServer: {
         contentBase: helpers.root('dist'),
-        compress: true,
-        port: 3000,
-        historyApiFallback: true,
-        host: '0.0.0.0',
-        inline: true
+            compress: true,
+            port: 3000,
+            historyApiFallback: true,
+            host: '0.0.0.0',
+            inline: true,
+            proxy: {
+            '/ecm': {
+                target: {
+                    host: "0.0.0.0",
+                        protocol: 'http:',
+                        port: 8080
+                },
+                pathRewrite: {
+                    '^/ecm': ''
+                }
+            },
+            '/bpm': {
+                target: {
+                    host: "0.0.0.0",
+                        protocol: 'http:',
+                        port: 9999
+                },
+                pathRewrite: {
+                    '^/bpm': ''
+                }
+            }
+        }
     },
 
     node: {

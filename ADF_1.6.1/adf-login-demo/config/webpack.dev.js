@@ -17,8 +17,7 @@ module.exports = webpackMerge(commonConfig, {
 
     resolve: {
         alias: {
-            "ng2-alfresco-core$": path.resolve(__dirname, '../../ng2-alfresco-core/index.ts'),
-            "ng2-alfresco-login$": path.resolve(__dirname, '../../ng2-alfresco-login/index.ts')
+            "ng2-alfresco-core$": path.resolve(__dirname, '../../ng2-alfresco-core/index.ts')
         },
         extensions: ['.ts', '.js'],
         modules: [path.resolve(__dirname, '../node_modules')]
