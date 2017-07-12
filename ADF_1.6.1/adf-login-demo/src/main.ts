@@ -25,9 +25,6 @@ import { LoginModule } from 'ng2-alfresco-login';
 @Component({
     selector: 'alfresco-app-demo',
     template: `
-    <label for="host"><b>Insert the ip of your Alfresco and Activiti instance:</b></label><br>
-       ECM Host:  <input id="ecmHost" type="text" size="48" (change)="updateEcmHost()" [(ngModel)]="ecmHost"><br>
-       BPM Host:  <input id="bpmHost" type="text" size="48" (change)="updateBpmHost()" [(ngModel)]="bpmHost"><br>
        <div style="border-radius: 8px; position: absolute; background-color: papayawhip; color: cadetblue; left: 10px; top: 120px; z-index: 1;">
 
         <p style="width:120px;margin: 20px;">
@@ -64,9 +61,6 @@ import { LoginModule } from 'ng2-alfresco-login';
 })
 export class AppComponent implements OnInit {
 
-    ecmHost: string = 'http://localhost:8080';
-    bpmHost: string = 'http://localhost:9999';
-    ticket: string;
     status: string = '';
     providers: string = 'ALL';
     disableCsrf: boolean = false;
@@ -78,30 +72,19 @@ export class AppComponent implements OnInit {
                 private storage: StorageService,
                 private logService: LogService) {
 
-        settingsService.ecmHost = this.ecmHost;
-        settingsService.bpmHost = this.bpmHost;
     }
 
     ngOnInit() {
-        this.settingsService.setProviders(this.providers);
         this.initProviders();
     }
 
-    updateEcmHost(): void {
-        this.settingsService.ecmHost = this.ecmHost;
-    }
-
-    updateBpmHost(): void {
-        this.settingsService.bpmHost = this.bpmHost;
-    }
-
     mySuccessMethod($event) {
-        this.logService.info('Success Login EventEmitt called with: ' + $event.value);
+        this.logService.info('Success Login EventEmit called with: ' + $event.value);
         this.status = $event.value;
     }
 
     myErrorMethod($event) {
-        this.logService.error('Error Login EventEmitt called with: ' + $event.value);
+        this.logService.error('Error Login EventEmit called with: ' + $event.value);
         this.status = $event.value;
     }
 

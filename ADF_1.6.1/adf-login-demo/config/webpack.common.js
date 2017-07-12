@@ -6,7 +6,7 @@ const helpers = require('./helpers');
 const path = require('path');
 
 const alfrescoLibs = [
-    'ng2-alfresco-login'
+    'ng2-alfresco-viewer'
 ];
 
 module.exports = {
@@ -90,9 +90,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './index.html'
         }),
-        {
-            from: 'app.config.json'
-        },
+
         new CopyWebpackPlugin([
             ... alfrescoLibs.map(lib => {
                 return {
@@ -108,7 +106,14 @@ module.exports = {
             },
             {
                 from: 'app.config.json'
-            }
+            },
+            ... alfrescoLibs.map(lib => {
+                return {
+                    context: 'node_modules',
+                    from: `${lib}/src/i18n/*.json`,
+                    to: 'node_modules'
+                }
+            })
         ]),
 
         new webpack.optimize.CommonsChunkPlugin({
@@ -118,11 +123,33 @@ module.exports = {
 
     devServer: {
         contentBase: helpers.root('dist'),
-        compress: true,
-        port: 3000,
-        historyApiFallback: true,
-        host: '0.0.0.0',
-        inline: true
+            compress: true,
+            port: 3000,
+            historyApiFallback: true,
+            host: '0.0.0.0',
+            inline: true,
+            proxy: {
+            '/ecm': {
+                target: {
+                    host: "0.0.0.0",
+                        protocol: 'http:',
+                        port: 8080
+                },
+                pathRewrite: {
+                    '^/ecm': ''
+                }
+            },
+            '/bpm': {
+                target: {
+                    host: "0.0.0.0",
+                        protocol: 'http:',
+                        port: 9999
+                },
+                pathRewrite: {
+                    '^/bpm': ''
+                }
+            }
+        }
     },
 
     node: {

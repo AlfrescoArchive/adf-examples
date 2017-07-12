@@ -25,11 +25,7 @@ import { SocialModule } from 'ng2-alfresco-social';
 @Component({
     selector: 'alfresco-app-demo',
     template: `
-               <label for="ticket"><b>Insert a valid access ticket / ticket:</b></label><br>
-               <input id="ticket" type="text" size="48" (change)="updateTicket()" [(ngModel)]="ticket"><br>
-               <label for="host"><b>Insert the ip of your Alfresco instance:</b></label><br>
-               <input id="host" type="text" size="48" (change)="updateHost()" [(ngModel)]="ecmHost"><br><br>
-               <div *ngIf="!authenticated" style="color:#FF2323">
+                   <div *ngIf="!authenticated" style="color:#FF2323">
                     Authentication failed to ip {{ ecmHost }} with user: admin, admin, you can still try to add a valid ticket to perform
                     operations.
                </div>
@@ -55,20 +51,13 @@ class SocialDemo implements OnInit {
     nodeId: string = '74cd8a96-8a21-47e5-9b3b-a1b3e296787d';
 
     authenticated: boolean;
-    ecmHost: string = 'http://127.0.0.1:8080';
-    ticket: string;
 
     constructor(private authService: AlfrescoAuthenticationService,
                 private settingsService: AlfrescoSettingsService,
                 private storage: StorageService,
                 private logService: LogService) {
 
-        settingsService.ecmHost = this.ecmHost;
         settingsService.setProviders('ECM');
-
-        if (this.authService.getTicketEcm()) {
-            this.ticket = this.authService.getTicketEcm();
-        }
     }
 
     ngOnInit() {
@@ -79,22 +68,12 @@ class SocialDemo implements OnInit {
         this.authService.login('admin', 'admin').subscribe(
             ticket => {
                 this.logService.info(ticket);
-                this.ticket = this.authService.getTicketEcm();
                 this.authenticated = true;
             },
             error => {
                 this.logService.error(error);
                 this.authenticated = false;
             });
-    }
-
-    public updateTicket(): void {
-        this.storage.setItem('ticket-ECM', this.ticket);
-    }
-
-    public updateHost(): void {
-        this.settingsService.ecmHost = this.ecmHost;
-        this.login();
     }
 
     logData(data) {
