@@ -33,14 +33,6 @@ npm install
 npm start
 ```
 
-## Screenshots
-
-Below some screenshots of the application as an example.
-
-![Alfresco Process Services](doc/screenshot.01.png)
-
-![Alfresco Process Services](doc/screenshot.02.png)
-
 ## Feedback, issues or support
 
 For feedback, issues or simply to request support, che the introduction [introduction](https://github.com/Alfresco/adf-examples) for further details.

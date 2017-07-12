@@ -29,7 +29,7 @@ import { ActivitiFormModule } from 'ng2-activiti-form';
         <label for="host"><b>Insert the ip of your Activiti instance:</b></label><br>
         <input id="host" type="text" size="48" (change)="updateHost()" [(ngModel)]="host"><br><br>
         <div *ngIf="!authenticated" style="color:#FF2323">
-            Authentication failed to ip {{ host }} with user: admin, admin, you can still try to add a valid ticket to perform
+            Authentication failed to ip {{ host }} with user: admin@app.activiti.com, admin, you can still try to add a valid ticket to perform
             operations.
         </div>
         <hr>
@@ -73,7 +73,7 @@ export class FormDemoComponent implements OnInit {
     }
 
     login() {
-        this.authService.login('admin', 'admin').subscribe(
+        this.authService.login('admin@app.activiti.com', 'admin').subscribe(
             ticket => {
                 this.logService.info(`Logged in with ticket ${ticket}`);
                 this.ticket = this.authService.getTicketBpm();
