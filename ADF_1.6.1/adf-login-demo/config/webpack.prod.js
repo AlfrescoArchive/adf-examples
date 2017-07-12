@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 const alfrescoLibs = [
-    'ng2-alfresco-login'
+    'ng2-alfresco-viewer'
 ];
 
 module.exports = webpackMerge(commonConfig, {

@@ -24,11 +24,7 @@ import { CoreModule, StorageService, AlfrescoSettingsService, AlfrescoAuthentica
 @Component({
     selector: 'alfresco-app-demo',
     template: `
-        <label for="ticket"><b>Insert a valid access ticket / ticket:</b></label><br>
-               <input id="ticket" type="text" size="48" (change)="updateTicket(); documentList.reload()" [(ngModel)]="ticket"><br>
-               <label for="host"><b>Insert the ip of your Alfresco instance:</b></label><br>
-               <input id="host" type="text" size="48" (change)="updateHost(); documentList.reload()" [(ngModel)]="ecmHost"><br><br>
-               <div *ngIf="!authenticated" style="color:#FF2323">
+                    <div *ngIf="!authenticated" style="color:#FF2323">
                     Authentication failed to ip {{ ecmHost }} with user: admin, admin, you can still try to add a valid ticket to perform
                     operations.
                </div>
@@ -121,8 +117,6 @@ class DocumentListDemo implements OnInit {
     // The identifier of a node. You can also use one of these well-known aliases: -my- | -shared- | -root-
     currentFolderId: string = '-my-';
     authenticated: boolean = false;
-    ecmHost: string = 'http://localhost:8080';
-    ticket: string;
 
     @ViewChild(DocumentListComponent)
     documentList: DocumentListComponent;
@@ -133,24 +127,11 @@ class DocumentListDemo implements OnInit {
                 private documentActions: DocumentActionsService,
                 private storage: StorageService,
                 private logService: LogService) {
-
-        settingsService.ecmHost = this.ecmHost;
-        settingsService.setProviders('ECM');
-
-        if (this.authService.getTicketEcm()) {
-            this.ticket = this.authService.getTicketEcm();
-        }
-
         translateService.addTranslationFolder();
         documentActions.setHandler('my-handler', this.myDocumentActionHandler.bind(this));
     }
 
-    public updateTicket(): void {
-        this.storage.setItem('ticket-ECM', this.ticket);
-    }
-
     public updateHost(): void {
-        this.settingsService.ecmHost = this.ecmHost;
         this.login();
     }
 
@@ -176,7 +157,6 @@ class DocumentListDemo implements OnInit {
         this.authService.login('admin', 'admin').subscribe(
             ticket => {
                 this.logService.info(ticket);
-                this.ticket = this.authService.getTicketEcm();
                 this.authenticated = true;
                 this.documentList.reload();
             },

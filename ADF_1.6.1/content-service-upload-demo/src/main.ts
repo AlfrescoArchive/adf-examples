@@ -24,10 +24,7 @@ import { UploadModule } from 'ng2-alfresco-upload';
 
 @Component({
     selector: 'alfresco-app-demo',
-    template: `<label for="ticket"><b>Insert a valid access ticket / ticket:</b></label><br>
-               <input id="ticket" type="text" size="48" (change)="updateTicket()" [(ngModel)]="ticket"><br>
-               <label for="host"><b>Insert the ip of your Alfresco instance:</b></label><br>
-               <input id="host" type="text" size="48" (change)="updateHost()" [(ngModel)]="ecmHost"><br><br>
+    template: `
                <div *ngIf="!authenticated" style="color:#FF2323">
                     Authentication failed to ip {{ host }} with user: admin, admin, you can still try to add a valid ticket to perform
                     operations.
@@ -99,33 +96,17 @@ import { UploadModule } from 'ng2-alfresco-upload';
 })
 export class MyDemoApp implements OnInit {
 
-    ecmHost: string = 'http://localhost:8080';
     authenticated: boolean;
     multipleFileUpload: boolean = false;
     folderUpload: boolean = false;
     acceptedFilesTypeShow: boolean = false;
     versioning: boolean = false;
-    ticket: string;
 
     constructor(private authService: AlfrescoAuthenticationService,
                 private settingsService: AlfrescoSettingsService,
                 private storage: StorageService,
                 private logService: LogService) {
-        settingsService.ecmHost = this.ecmHost;
         settingsService.setProviders('ECM');
-
-        if (this.authService.getTicketEcm()) {
-            this.ticket = this.authService.getTicketEcm();
-        }
-    }
-
-    updateTicket(): void {
-        this.storage.setItem('ticket-ECM', this.ticket);
-    }
-
-    updateHost(): void {
-        this.settingsService.ecmHost = this.ecmHost;
-        this.login();
     }
 
     customMethod(event: Object): void {
@@ -140,7 +121,6 @@ export class MyDemoApp implements OnInit {
         this.authService.login('admin', 'admin').subscribe(
             ticket => {
                 this.logService.info(ticket);
-                this.ticket = this.authService.getTicketEcm();
                 this.authenticated = true;
             },
             error => {

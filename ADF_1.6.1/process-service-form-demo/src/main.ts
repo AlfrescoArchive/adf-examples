@@ -24,10 +24,6 @@ import { ActivitiFormModule } from 'ng2-activiti-form';
 @Component({
     selector: 'alfresco-app-demo',
     template: `
-        <label for="ticket"><b>Insert a valid ticket:</b></label><br>
-        <input id="ticket" type="text" size="48" (change)="updateTicket()" [(ngModel)]="ticket"><br>
-        <label for="host"><b>Insert the ip of your Activiti instance:</b></label><br>
-        <input id="host" type="text" size="48" (change)="updateHost()" [(ngModel)]="host"><br><br>
         <div *ngIf="!authenticated" style="color:#FF2323">
             Authentication failed to ip {{ host }} with user: admin, admin, you can still try to add a valid ticket to perform
             operations.
@@ -44,28 +40,12 @@ export class FormDemoComponent implements OnInit {
 
     taskId: number;
     authenticated: boolean;
-    host: string = 'http://localhost:9999';
-    ticket: string;
 
     constructor(private authService: AlfrescoAuthenticationService,
                 private settingsService: AlfrescoSettingsService,
                 private storage: StorageService,
                 private logService: LogService) {
-        settingsService.bpmHost = this.host;
         settingsService.setProviders('BPM');
-
-        if (this.authService.getTicketBpm()) {
-            this.ticket = this.authService.getTicketBpm();
-        }
-    }
-
-    public updateTicket(): void {
-        this.storage.setItem('ticket-BPM', this.ticket);
-    }
-
-    public updateHost(): void {
-        this.settingsService.bpmHost = this.host;
-        this.login();
     }
 
     public ngOnInit(): void {

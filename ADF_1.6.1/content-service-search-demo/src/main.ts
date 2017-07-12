@@ -30,11 +30,8 @@ import {
 
 @Component({
     selector: 'alfresco-app-demo',
-    template: `<label for="ticket"><b>Insert a valid access ticket / ticket:</b></label><br>
-               <input id="ticket" type="text" size="48" (change)="updateTicket()" [(ngModel)]="ticket"><br>
-               <label for="host"><b>Insert the ip of your Alfresco instance:</b></label><br>
-               <input id="host" type="text" size="48" (change)="updateHost()" [(ngModel)]="ecmHost"><br><br>
-               <div *ngIf="!authenticated" style="color:#FF2323">
+    template: `
+                <div *ngIf="!authenticated" style="color:#FF2323">
                     Authentication failed to ip {{ host }} with user: admin, admin, you can still try to add a valid ticket to perform
                     operations.
                </div>
@@ -51,23 +48,12 @@ class SearchDemo implements OnInit {
 
     authenticated: boolean;
     searchTerm: string = 'test';
-    ecmHost: string = 'http://localhost:8080';
-    ticket: string;
 
     constructor(private authService: AlfrescoAuthenticationService,
                 private settingsService: AlfrescoSettingsService,
                 translation: AlfrescoTranslationService,
                 private logService: LogService) {
-
-        settingsService.ecmHost = this.ecmHost;
-        settingsService.setProviders('ECM');
-
         translation.addTranslationFolder();
-    }
-
-    public updateHost(): void {
-        this.settingsService.ecmHost = this.ecmHost;
-        this.login();
     }
 
     ngOnInit() {
@@ -78,7 +64,6 @@ class SearchDemo implements OnInit {
         this.authService.login('admin', 'admin').subscribe(
             ticket => {
                 this.logService.info(ticket);
-                this.ticket = this.authService.getTicketEcm();
                 this.authenticated = true;
             },
             error => {
