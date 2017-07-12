@@ -14,7 +14,8 @@ import 'hammerjs';
 
 // Alfresco
 import 'alfresco-js-api';
-import 'ng2-alfresco-documentlist';
+import 'ng2-alfresco-core';
+import 'ng2-alfresco-datatable';
 
 import '@angular/material/prebuilt-themes/indigo-pink.css';
 
@@ -22,7 +23,3 @@ import '@angular/material/prebuilt-themes/indigo-pink.css';
 import 'material-design-lite/material.js';
 import 'material-design-lite/dist/material.orange-blue.min.css';
 import 'material-design-icons/iconfont/material-icons.css';
-
-// Polyfill(s) for dialogs
-require('script-loader!dialog-polyfill/dialog-polyfill');
-import 'dialog-polyfill/dialog-polyfill.css';
