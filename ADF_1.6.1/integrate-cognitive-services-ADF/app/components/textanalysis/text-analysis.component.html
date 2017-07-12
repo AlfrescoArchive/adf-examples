@@ -1,0 +1,39 @@
+<div class="text-analysis-wrap">
+    <div class="text-analysis-internal-wrap">
+        <ul>
+            <li>
+                <div *ngIf="Text" class="text-analysis-language">Text :</div>
+                <div>{{text}}</div>
+            </li>
+
+            <li>
+                <div *ngIf="language" class="text-analysis-language">Language :</div>
+                <div>{{language}}</div>
+            </li>
+
+            <li>
+                <div *ngIf="keyPhrases" class="text-analysis-language">Key Phrases :</div>
+                <div>{{keyPhrases}}</div>
+            </li>
+            <li>
+                <div *ngIf="language" class="text-analysis-sentiment">
+                    <div class="text-analysis-sentiment-label">Sentiment :</div>
+
+                    <i *ngIf="sentiment>0.00 && sentiment<=0.25" class="very-dissatisfied material-icons">sentiment_very_dissatisfied</i>
+
+                    <i *ngIf="sentiment>0.25 && sentiment<=0.49" class="dissatisfied material-icons">sentiment_dissatisfied</i>
+
+                    <i *ngIf="sentiment>0.49 && sentiment<=0.65" class="neutral material-icons">sentiment_neutral</i>
+
+                    <i *ngIf="sentiment>0.65 && sentiment<=0.85"
+                       class="satisfied material-icons">sentiment_satisfied</i>
+
+                    <i *ngIf="sentiment>0.85" class="very-satisfied material-icons">sentiment_very_satisfied</i>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
