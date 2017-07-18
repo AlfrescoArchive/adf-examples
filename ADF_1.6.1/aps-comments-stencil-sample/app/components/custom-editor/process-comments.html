@@ -1,0 +1,28 @@
+<!-- Comments cannot be added on a start form, hence checking if taskId exists--> 
+<div *ngIf="taskId">
+    <textarea class="mdl-textfield__input" 
+            type="text" 
+            rows="5" 
+            [value]="inputText"
+            [(ngModel)]="inputText">
+    </textarea>
+    <br>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" [disabled]="!inputText"
+        (click)="addComment()">Add Comment
+    </button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" [disabled]="!inputText"
+        (click)="clearComment()">Clear Comment
+    </button>
+    <br><br>
+    <!-- Hide if no comments in the history--> 
+    <div *ngIf="comments.length>0">
+        <b>Comment History</b>
+        <br><br>
+        <div>
+            <alfresco-datatable
+                [data]="data"
+                (rowClick)="commentDetails($event)">
+            </alfresco-datatable>
+        </div>
+    </div>
+</div>

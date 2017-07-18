@@ -1,0 +1,48 @@
+<!-- Always shows a header, even in smaller screens. -->
+<div mdl class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header main_header_adf" [ngClass]="{hide: isAPageWithHeaderBar()}">
+    <div class="mdl-button-padding mdl-layout__header-row">
+
+      
+      <div>
+        <ng2-alfresco-userinfo class="user-profile" [menuOpenType]="left">
+        </ng2-alfresco-userinfo>
+      </div>
+      
+
+      <!-- Title -->
+      <span class="mdl-layout-title">APS Comments Stencil Example</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      
+
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" data-automation-id="new-request" href="" routerLink="/new-request">New Request</a>
+        <a class="mdl-navigation__link" data-automation-id="my-tasks" href="" routerLink="/my-tasks">My Tasks</a>
+      </nav>
+
+    </div>
+  </header>
+
+  
+  <div class="mdl-layout__drawer">
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" (click)="onLogout($event)">
+        <label tabindex="0">Logout</label>
+      </a>
+    </nav>
+    <span class="mdl-layout-title">Components</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="" routerLink="/new-request" (click)="hideDrawer()">New Request</a>
+      <a class="mdl-navigation__link" href="" routerLink="/my-tasks" (click)="hideDrawer()">My Tasks</a>
+    </nav>
+  </div>
+  
+
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
