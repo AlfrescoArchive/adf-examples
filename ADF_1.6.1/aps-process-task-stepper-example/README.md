@@ -45,9 +45,9 @@ npm start
 
 Below some screenshots of the application as an example.
 
-![Editing an open task in the process](public/img/open-task.png)
+![Editing an open task in the process](public/img/open-task-1.png)
 
-![Viewing a completed task in the same process](public/img/completed-task.png)
+![Viewing a completed task in the same process](public/img/completed-task-1.png)
 
 ## Feedback, issues or support
 
