@@ -1,0 +1,21 @@
+<!-- Courtesy https://codepen.io/sharafat_8271/pen/KVWMXP -->
+<div class="mdl-card">
+  <div class="mdl-card__supporting-text">
+    <div class="mdl-stepper-horizontal-alternative">
+      <ng-template ngFor let-item="$implicit" [ngForOf]="steps" let-i="index">
+        <div class="mdl-stepper-step" [class.active-step]="item.isSelected" [class.editable-step]="item.isSelected &amp;&amp; !item.isComplete &amp;&amp; item.isAssignedToCurrentUser" [class.step-done]="item.isComplete" (click)="stepClicked($event, item)">
+          <div class="mdl-stepper-circle"><span>{{ i + 1}}</span></div>
+          <div class="mdl-stepper-title">Task Name: {{item.name}}
+             <div *ngIf="item.assigneeName"> Assignee: {{ item.assigneeName}} </div>
+             <div *ngIf="item.createdDate"> Created On: {{ item.createdDate | date: 'MM/dd/yyyy'}} </div>
+             <div *ngIf="item.completedDate"> Completed On: {{ item.completedDate | date: 'MM/dd/yyyy'}} </div>
+          </div>
+          <div class="mdl-stepper-bar-left"></div>
+          <div class="mdl-stepper-bar-right"></div>
+        </div>
+      </ng-template>
+    </div>
+
+  </div>
+
+</div>

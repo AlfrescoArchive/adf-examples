@@ -1,0 +1,7 @@
+{
+  "ecmHost": "http://127.0.0.1:8080",
+  "bpmHost": "http://127.0.0.1:8080",
+  "application": {
+    "name": "Alfresco"
+  }
+}
