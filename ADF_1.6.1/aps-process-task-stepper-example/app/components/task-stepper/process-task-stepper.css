@@ -12,7 +12,7 @@
 }
 
 .mdl-stepper-horizontal-alternative .mdl-stepper-step {
-  width: 25%;
+  /* width: 25%; */
   /* 100 / no_of_steps */
 }
 
