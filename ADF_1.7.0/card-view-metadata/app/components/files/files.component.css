@@ -1,5 +1,7 @@
 .container {
     margin: 10px;
+    width: 50%;
+    float:left
 }
 
 @media only screen and (max-width: 640px) {
@@ -48,4 +50,11 @@ adf-document-list >>> adf-datatable tr.is-selected .image-table-cell::before {
     margin-left: 3%;
     width: 100%;
     min-width: 200px;
+}
+
+.adf-metadata {
+    padding: 21px;
+    width: 44%;
+    float: left;
+    margin: 11px;
 }
