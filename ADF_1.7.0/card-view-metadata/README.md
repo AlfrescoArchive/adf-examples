@@ -6,6 +6,9 @@ The code in this example is explain in the article [Metadata in ADF 1.7.0](https
 This project is part of the [Alfresco Application Developer Framework](https://github.com/Alfresco/alfresco-ng2-components) collection of examples.
 For further details about the repository and all the available examples please check the [introduction](https://github.com/Alfresco/adf-examples).
 
+![Metadata](doc/img.png)
+
+
 ## Prerequisites
 
 Before running the application, please check the assumptions listed below.
