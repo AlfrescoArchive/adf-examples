@@ -1,0 +1,481 @@
+{
+  "name": "adf-1-5-to-1-6-1-demonstration",
+  "version": "0.1.0",
+  "problems": [
+    "peer dep missing: @angular/common@^2.3.0, required by ng2-charts@1.5.0",
+    "peer dep missing: @angular/core@^2.3.0, required by ng2-charts@1.5.0",
+    "peer dep missing: @angular/core@^2.0.0, required by ng2-translate@5.0.0",
+    "peer dep missing: @angular/http@^2.0.0, required by ng2-translate@5.0.0"
+  ],
+  "dependencies": {
+    "@angular/animations": {
+      "version": "4.0.3",
+      "from": "@angular/animations@~4.0.0",
+      "resolved": "https://registry.npmjs.org/@angular/animations/-/animations-4.0.3.tgz"
+    },
+    "@angular/common": {
+      "required": {
+        "_from": "@angular/common@~4.0.0",
+        "_id": "@angular/common@4.0.3",
+        "_inBundle": false,
+        "_integrity": "sha1-F0coletCXygSs6eRYrW0lNJQals=",
+        "_location": "/@angular/common",
+        "_phantomChildren": {},
+        "_requested": {
+          "type": "range",
+          "registry": true,
+          "raw": "@angular/common@~4.0.0",
+          "name": "@angular/common",
+          "escapedName": "@angular%2fcommon",
+          "scope": "@angular",
+          "rawSpec": "~4.0.0",
+          "saveSpec": null,
+          "fetchSpec": "~4.0.0"
+        },
+        "_requiredBy": [
+          "/",
+          "/ng2-activiti-analytics",
+          "/ng2-activiti-diagrams",
+          "/ng2-activiti-form",
+          "/ng2-activiti-processlist",
+          "/ng2-activiti-tasklist",
+          "/ng2-alfresco-core",
+          "/ng2-alfresco-datatable",
+          "/ng2-alfresco-documentlist",
+          "/ng2-alfresco-login",
+          "/ng2-alfresco-search",
+          "/ng2-alfresco-social",
+          "/ng2-alfresco-tag",
+          "/ng2-alfresco-upload",
+          "/ng2-alfresco-userinfo",
+          "/ng2-alfresco-viewer",
+          "/ng2-alfresco-webscript"
+        ],
+        "_resolved": "https://registry.npmjs.org/@angular/common/-/common-4.0.3.tgz",
+        "_shasum": "17472895eb425f2812b3a79162b5b494d2506a5b",
+        "_spec": "@angular/common@~4.0.0",
+        "_where": "/Users/apopovics/Source/Alfresco/adf-examples/ADF 1.6.1/Upgrade-from-1.5",
+        "author": {
+          "name": "angular"
+        },
+        "bugs": {
+          "url": "https://github.com/angular/angular/issues"
+        },
+        "bundleDependencies": false,
+        "deprecated": false,
+        "description": "Angular - commonly needed directives and services",
+        "es2015": "./@angular/common.js",
+        "homepage": "https://github.com/angular/angular#readme",
+        "license": "MIT",
+        "main": "./bundles/common.umd.js",
+        "module": "./@angular/common.es5.js",
+        "name": "@angular/common",
+        "peerDependencies": {
+          "@angular/core": "4.0.3"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/angular/angular.git"
+        },
+        "typings": "./common.d.ts",
+        "version": "4.0.3",
+        "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n",
+        "readmeFilename": "README.md",
+        "dependencies": {},
+        "devDependencies": {},
+        "optionalDependencies": {},
+        "_dependencies": {},
+        "path": "/Users/apopovics/Source/Alfresco/adf-examples/ADF 1.6.1/Upgrade-from-1.5/node_modules/@angular/common",
+        "error": "[Circular]",
+        "extraneous": false,
+        "peerMissing": [
+          {
+            "requiredBy": "ng2-charts@1.5.0",
+            "requires": "@angular/common@^2.3.0"
+          }
+        ]
+      },
+      "peerMissing": true
+    },
+    "@angular/compiler": {
+      "version": "4.0.3",
+      "from": "@angular/compiler@~4.0.0",
+      "resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-4.0.3.tgz"
+    },
+    "@angular/compiler-cli": {
+      "version": "4.0.3",
+      "from": "@angular/compiler-cli@~4.0.0",
+      "resolved": "https://registry.npmjs.org/@angular/compiler-cli/-/compiler-cli-4.0.3.tgz"
+    },
+    "@angular/core": {
+      "required": {
+        "_from": "@angular/core@~4.0.0",
+        "_id": "@angular/core@4.0.3",
+        "_inBundle": false,
+        "_integrity": "sha1-Yb4h22qld44zFZ/9OMu+uvFhINk=",
+        "_location": "/@angular/core",
+        "_phantomChildren": {},
+        "_requested": {
+          "type": "range",
+          "registry": true,
+          "raw": "@angular/core@~4.0.0",
+          "name": "@angular/core",
+          "escapedName": "@angular%2fcore",
+          "scope": "@angular",
+          "rawSpec": "~4.0.0",
+          "saveSpec": "[Circular]",
+          "fetchSpec": "~4.0.0"
+        },
+        "_requiredBy": [
+          "/",
+          "/ng2-activiti-analytics",
+          "/ng2-activiti-diagrams",
+          "/ng2-activiti-form",
+          "/ng2-activiti-processlist",
+          "/ng2-activiti-tasklist",
+          "/ng2-alfresco-core",
+          "/ng2-alfresco-datatable",
+          "/ng2-alfresco-documentlist",
+          "/ng2-alfresco-login",
+          "/ng2-alfresco-search",
+          "/ng2-alfresco-social",
+          "/ng2-alfresco-tag",
+          "/ng2-alfresco-upload",
+          "/ng2-alfresco-userinfo",
+          "/ng2-alfresco-viewer",
+          "/ng2-alfresco-webscript"
+        ],
+        "_resolved": "https://registry.npmjs.org/@angular/core/-/core-4.0.3.tgz",
+        "_shasum": "61be21db6aa5778e33159ffd38cbbebaf16120d9",
+        "_spec": "@angular/core@~4.0.0",
+        "_where": "/Users/apopovics/Source/Alfresco/adf-examples/ADF 1.6.1/Upgrade-from-1.5",
+        "author": {
+          "name": "angular"
+        },
+        "bugs": {
+          "url": "https://github.com/angular/angular/issues"
+        },
+        "bundleDependencies": false,
+        "deprecated": false,
+        "description": "Angular - the core framework",
+        "es2015": "./@angular/core.js",
+        "homepage": "https://github.com/angular/angular#readme",
+        "license": "MIT",
+        "main": "./bundles/core.umd.js",
+        "module": "./@angular/core.es5.js",
+        "name": "@angular/core",
+        "peerDependencies": {
+          "rxjs": "^5.0.1",
+          "zone.js": "^0.8.4"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/angular/angular.git"
+        },
+        "typings": "./core.d.ts",
+        "version": "4.0.3",
+        "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n",
+        "readmeFilename": "README.md",
+        "dependencies": {},
+        "devDependencies": {},
+        "optionalDependencies": {},
+        "_dependencies": {},
+        "path": "/Users/apopovics/Source/Alfresco/adf-examples/ADF 1.6.1/Upgrade-from-1.5/node_modules/@angular/core",
+        "error": "[Circular]",
+        "extraneous": false,
+        "peerMissing": [
+          {
+            "requiredBy": "ng2-charts@1.5.0",
+            "requires": "@angular/core@^2.3.0"
+          },
+          {
+            "requiredBy": "ng2-translate@5.0.0",
+            "requires": "@angular/core@^2.0.0"
+          }
+        ]
+      },
+      "peerMissing": true
+    },
+    "@angular/forms": {
+      "version": "4.0.3",
+      "from": "@angular/forms@~4.0.0",
+      "resolved": "https://registry.npmjs.org/@angular/forms/-/forms-4.0.3.tgz"
+    },
+    "@angular/http": {
+      "required": {
+        "_from": "@angular/http@~4.0.0",
+        "_id": "@angular/http@4.0.3",
+        "_inBundle": false,
+        "_integrity": "sha1-77twGiFex3BMAhZ2SEuF7Uc5L0s=",
+        "_location": "/@angular/http",
+        "_phantomChildren": {},
+        "_requested": {
+          "type": "range",
+          "registry": true,
+          "raw": "@angular/http@~4.0.0",
+          "name": "@angular/http",
+          "escapedName": "@angular%2fhttp",
+          "scope": "@angular",
+          "rawSpec": "~4.0.0",
+          "saveSpec": "[Circular]",
+          "fetchSpec": "~4.0.0"
+        },
+        "_requiredBy": [
+          "/",
+          "/ng2-activiti-analytics",
+          "/ng2-activiti-diagrams",
+          "/ng2-activiti-form",
+          "/ng2-activiti-processlist",
+          "/ng2-activiti-tasklist",
+          "/ng2-alfresco-core",
+          "/ng2-alfresco-datatable",
+          "/ng2-alfresco-documentlist",
+          "/ng2-alfresco-login",
+          "/ng2-alfresco-search",
+          "/ng2-alfresco-social",
+          "/ng2-alfresco-tag",
+          "/ng2-alfresco-upload",
+          "/ng2-alfresco-userinfo",
+          "/ng2-alfresco-viewer",
+          "/ng2-alfresco-webscript"
+        ],
+        "_resolved": "https://registry.npmjs.org/@angular/http/-/http-4.0.3.tgz",
+        "_shasum": "efbb701a215ec7704c021676484b85ed47392f4b",
+        "_spec": "@angular/http@~4.0.0",
+        "_where": "/Users/apopovics/Source/Alfresco/adf-examples/ADF 1.6.1/Upgrade-from-1.5",
+        "author": {
+          "name": "angular"
+        },
+        "bugs": {
+          "url": "https://github.com/angular/angular/issues"
+        },
+        "bundleDependencies": false,
+        "deprecated": false,
+        "description": "Angular - the http service",
+        "es2015": "./@angular/http.js",
+        "homepage": "https://github.com/angular/angular#readme",
+        "license": "MIT",
+        "main": "./bundles/http.umd.js",
+        "module": "./@angular/http.es5.js",
+        "name": "@angular/http",
+        "peerDependencies": {
+          "rxjs": "^5.0.1",
+          "@angular/core": "4.0.3",
+          "@angular/platform-browser": "4.0.3"
+        },
+        "repository": {
+          "type": "git",
+          "url": "git+https://github.com/angular/angular.git"
+        },
+        "typings": "./http.d.ts",
+        "version": "4.0.3",
+        "readme": "Angular\n=======\n\nThe sources for this package are in the main [Angular](https://github.com/angular/angular) repo. Please file issues and pull requests against that repo.\n\nLicense: MIT\n",
+        "readmeFilename": "README.md",
+        "dependencies": {},
+        "devDependencies": {},
+        "optionalDependencies": {},
+        "_dependencies": {},
+        "path": "/Users/apopovics/Source/Alfresco/adf-examples/ADF 1.6.1/Upgrade-from-1.5/node_modules/@angular/http",
+        "error": "[Circular]",
+        "extraneous": false,
+        "peerMissing": [
+          {
+            "requiredBy": "ng2-translate@5.0.0",
+            "requires": "@angular/http@^2.0.0"
+          }
+        ]
+      },
+      "peerMissing": true
+    },
+    "@angular/material": {
+      "version": "2.0.0-beta.6",
+      "from": "@angular/material@2.0.0-beta.6",
+      "resolved": "https://registry.npmjs.org/@angular/material/-/material-2.0.0-beta.6.tgz"
+    },
+    "@angular/platform-browser": {
+      "version": "4.0.3",
+      "from": "@angular/platform-browser@~4.0.0",
+      "resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-4.0.3.tgz"
+    },
+    "@angular/platform-browser-dynamic": {
+      "version": "4.0.3",
+      "from": "@angular/platform-browser-dynamic@~4.0.0",
+      "resolved": "https://registry.npmjs.org/@angular/platform-browser-dynamic/-/platform-browser-dynamic-4.0.3.tgz"
+    },
+    "@angular/router": {
+      "version": "4.0.3",
+      "from": "@angular/router@~4.0.0",
+      "resolved": "https://registry.npmjs.org/@angular/router/-/router-4.0.3.tgz"
+    },
+    "alfresco-js-api": {
+      "version": "1.6.1",
+      "from": "alfresco-js-api@1.6.1",
+      "resolved": "https://registry.npmjs.org/alfresco-js-api/-/alfresco-js-api-1.6.1.tgz"
+    },
+    "chart.js": {
+      "version": "2.5.0",
+      "from": "chart.js@2.5.0",
+      "resolved": "https://registry.npmjs.org/chart.js/-/chart.js-2.5.0.tgz"
+    },
+    "core-js": {
+      "version": "2.4.1",
+      "from": "core-js@2.4.1",
+      "resolved": "https://registry.npmjs.org/core-js/-/core-js-2.4.1.tgz"
+    },
+    "dialog-polyfill": {
+      "version": "0.4.7",
+      "from": "dialog-polyfill@^0.4.7",
+      "resolved": "https://registry.npmjs.org/dialog-polyfill/-/dialog-polyfill-0.4.7.tgz"
+    },
+    "element.scrollintoviewifneeded-polyfill": {
+      "version": "1.0.1",
+      "from": "element.scrollintoviewifneeded-polyfill@^1.0.1",
+      "resolved": "https://registry.npmjs.org/element.scrollintoviewifneeded-polyfill/-/element.scrollintoviewifneeded-polyfill-1.0.1.tgz"
+    },
+    "flag-icon-css": {
+      "version": "2.3.0",
+      "from": "flag-icon-css@2.3.0",
+      "resolved": "https://registry.npmjs.org/flag-icon-css/-/flag-icon-css-2.3.0.tgz"
+    },
+    "material-design-icons": {
+      "version": "2.2.3",
+      "from": "material-design-icons@2.2.3",
+      "resolved": "https://registry.npmjs.org/material-design-icons/-/material-design-icons-2.2.3.tgz"
+    },
+    "material-design-lite": {
+      "version": "1.2.1",
+      "from": "material-design-lite@1.2.1",
+      "resolved": "https://registry.npmjs.org/material-design-lite/-/material-design-lite-1.2.1.tgz"
+    },
+    "md-date-time-picker": {
+      "version": "2.2.0",
+      "from": "md-date-time-picker@2.2.0",
+      "resolved": "https://registry.npmjs.org/md-date-time-picker/-/md-date-time-picker-2.2.0.tgz"
+    },
+    "moment": {
+      "version": "2.15.1",
+      "from": "moment@2.15.1",
+      "resolved": "https://registry.npmjs.org/moment/-/moment-2.15.1.tgz"
+    },
+    "ng2-3d-editor": {
+      "version": "0.0.15",
+      "from": "ng2-3d-editor@0.0.15",
+      "resolved": "https://registry.npmjs.org/ng2-3d-editor/-/ng2-3d-editor-0.0.15.tgz"
+    },
+    "ng2-activiti-analytics": {
+      "version": "1.6.1",
+      "from": "ng2-activiti-analytics@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-analytics/-/ng2-activiti-analytics-1.6.1.tgz"
+    },
+    "ng2-activiti-diagrams": {
+      "version": "1.6.1",
+      "from": "ng2-activiti-diagrams@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-diagrams/-/ng2-activiti-diagrams-1.6.1.tgz"
+    },
+    "ng2-activiti-form": {
+      "version": "1.6.1",
+      "from": "ng2-activiti-form@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-form/-/ng2-activiti-form-1.6.1.tgz"
+    },
+    "ng2-activiti-processlist": {
+      "version": "1.6.1",
+      "from": "ng2-activiti-processlist@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-processlist/-/ng2-activiti-processlist-1.6.1.tgz"
+    },
+    "ng2-activiti-tasklist": {
+      "version": "1.6.1",
+      "from": "ng2-activiti-tasklist@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-activiti-tasklist/-/ng2-activiti-tasklist-1.6.1.tgz"
+    },
+    "ng2-alfresco-core": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-core@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-core/-/ng2-alfresco-core-1.6.1.tgz"
+    },
+    "ng2-alfresco-datatable": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-datatable@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-datatable/-/ng2-alfresco-datatable-1.6.1.tgz"
+    },
+    "ng2-alfresco-documentlist": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-documentlist@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-documentlist/-/ng2-alfresco-documentlist-1.6.1.tgz"
+    },
+    "ng2-alfresco-login": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-login@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-login/-/ng2-alfresco-login-1.6.1.tgz"
+    },
+    "ng2-alfresco-search": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-search@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-search/-/ng2-alfresco-search-1.6.1.tgz"
+    },
+    "ng2-alfresco-social": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-social@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-social/-/ng2-alfresco-social-1.6.1.tgz"
+    },
+    "ng2-alfresco-tag": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-tag@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-tag/-/ng2-alfresco-tag-1.6.1.tgz"
+    },
+    "ng2-alfresco-upload": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-upload@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-upload/-/ng2-alfresco-upload-1.6.1.tgz"
+    },
+    "ng2-alfresco-userinfo": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-userinfo@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-userinfo/-/ng2-alfresco-userinfo-1.6.1.tgz"
+    },
+    "ng2-alfresco-viewer": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-viewer@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-viewer/-/ng2-alfresco-viewer-1.6.1.tgz"
+    },
+    "ng2-alfresco-webscript": {
+      "version": "1.6.1",
+      "from": "ng2-alfresco-webscript@1.6.1",
+      "resolved": "https://registry.npmjs.org/ng2-alfresco-webscript/-/ng2-alfresco-webscript-1.6.1.tgz"
+    },
+    "ng2-charts": {
+      "version": "1.5.0",
+      "from": "ng2-charts@1.5.0",
+      "resolved": "https://registry.npmjs.org/ng2-charts/-/ng2-charts-1.5.0.tgz"
+    },
+    "ng2-translate": {
+      "version": "5.0.0",
+      "from": "ng2-translate@5.0.0",
+      "resolved": "https://registry.npmjs.org/ng2-translate/-/ng2-translate-5.0.0.tgz"
+    },
+    "pdfjs-dist": {
+      "version": "1.5.404",
+      "from": "pdfjs-dist@1.5.404",
+      "resolved": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-1.5.404.tgz"
+    },
+    "raphael": {
+      "version": "2.2.7",
+      "from": "raphael@2.2.7",
+      "resolved": "https://registry.npmjs.org/raphael/-/raphael-2.2.7.tgz"
+    },
+    "reflect-metadata": {
+      "version": "0.1.9",
+      "from": "reflect-metadata@0.1.9",
+      "resolved": "https://registry.npmjs.org/reflect-metadata/-/reflect-metadata-0.1.9.tgz"
+    },
+    "rxjs": {
+      "version": "5.1.0",
+      "from": "rxjs@5.1.0",
+      "resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.1.0.tgz"
+    },
+    "zone.js": {
+      "version": "0.8.11",
+      "from": "zone.js@0.8.11",
+      "resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.8.11.tgz"
+    }
+  }
+}
