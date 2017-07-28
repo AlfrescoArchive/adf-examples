@@ -20,7 +20,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Editor3DModule } from 'ng2-3d-editor';
 
-import { CoreModule } from 'ng2-alfresco-core';
+import { AppConfigService, CoreModule } from 'ng2-alfresco-core';
 import { DataTableModule } from 'ng2-alfresco-datatable';
 
 import { SearchModule } from 'ng2-alfresco-search';
@@ -41,6 +41,7 @@ import { UserInfoComponentModule } from 'ng2-alfresco-userinfo';
 import { ViewerModule } from 'ng2-alfresco-viewer';
 import { AppComponent } from './app.component';
 import { routing } from './app.routes';
+import { DebugAppConfigService } from './services/debug-app-config.service';
 
 import {
   HomeComponent,
@@ -105,7 +106,9 @@ if (process.env.ENV === 'production') {
         SettingComponent,
         FormDemoComponent
     ],
-    providers: [],
+    providers: [
+        { provide: AppConfigService, useClass: DebugAppConfigService }
+    ],
     bootstrap: [ AppComponent ]
 
     , entryComponents: [
