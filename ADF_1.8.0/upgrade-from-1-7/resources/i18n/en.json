@@ -1,0 +1,28 @@
+{
+  "title": "Welcome",
+
+  "DOCUMENT_LIST": {
+    "COLUMNS": {
+      "DISPLAY_NAME": "Display name",
+      "TAG": "Tag",
+      "CREATED_BY": "Created by",
+      "CREATED_ON": "Created on"
+    },
+    "ACTIONS": {
+      "FOLDER": {
+                "COPY": "Copy",
+                "MOVE": "Move",
+        "DELETE": "Delete"
+      },
+      "DOCUMENT": {
+        "DOWNLOAD": "Download",
+                "COPY": "Copy",
+                "MOVE": "Move",
+                "DELETE": "Delete"
+      }
+    }
+  },
+  "ANALYTICS_REPORT":{
+    "NO_REPORT_MESSAGE":"No report selected. Choose a report from the list"
+  }
+}
