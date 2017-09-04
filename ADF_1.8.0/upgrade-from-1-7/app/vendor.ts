@@ -42,6 +42,7 @@ import '@angular/material/prebuilt-themes/indigo-pink.css';
 import 'material-design-lite/material.js';
 import 'material-design-lite/dist/material.orange-blue.min.css';
 import 'material-design-icons/iconfont/material-icons.css';
+import 'ng2-alfresco-core/prebuilt-themes/adf-blue-orange.css';
 
 import '../public/css/app.css';
 import '../public/css/muli-font.css';
