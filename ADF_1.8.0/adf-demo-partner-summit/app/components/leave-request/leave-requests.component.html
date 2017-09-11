@@ -1,0 +1,28 @@
+<div *ngIf="!showLeaveDetails">
+    <adf-process-instance-list
+            [appId]="appId"
+            [state]="'all'"
+            [processDefinitionKey]="processDefinitionKey"
+            (rowClick)="onProcessRowClick($event)">
+    </adf-process-instance-list>
+</div>
+<div *ngIf="showLeaveDetails">
+    <br>
+    <button color="accent" md-mini-fab  (click)="onClickBack()" ><md-icon>keyboard_backspace</md-icon></button>
+    <button class="align-right" color="accent" md-raised-button data-automation-id="btn-clone-request" (click)="cloneRequest()">
+        <md-icon>add</md-icon>
+        <span>Clone Request</span>
+    </button>
+    <br>
+    <br>
+    <adf-form
+            [readOnly]="true"
+            [formId]="leaveDetailsFormId"
+            [showValidationIcon]="false"
+            [data]="leaveDetails"
+            [showTitle]="false"
+            [showSaveButton]="false"
+            [showDebugButton]="false"
+            [showRefreshButton]="false">
+    </adf-form>
+</div>

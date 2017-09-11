@@ -1,0 +1,49 @@
+<md-toolbar color="primary" *ngIf="!isAPageWithHeaderBar()">
+  <ng2-alfresco-userinfo
+    class="user-profile"
+    [menuPositionX]="'before'"
+    [menuPositionY]="'above'">
+  </ng2-alfresco-userinfo>
+
+  <span>Alfresco Partner Summit ADF Demo</span>
+
+  <div class="app-menu--spacer"></div>
+  
+  <!-- Search bar -->
+  <search-bar (expand)="onToggleSearch($event)"></search-bar>
+
+  <a md-button data-automation-id="home" href="" routerLink="/">Home</a>
+  <a md-button data-automation-id="process-services" href="" routerLink="/process-services">APS</a>
+  <a md-button data-automation-id="files" href="" routerLink="/files">ACS</a>
+  <a md-button data-automation-id="new-leave-request" href="" routerLink="/new-leave-request">New Leave</a>
+  <a md-button data-automation-id="leave-requests" href="" routerLink="/leave-requests">Leave Requests</a>
+
+  <theme-picker></theme-picker>
+  <button md-icon-button [mdMenuTriggerFor]="langMenu">
+    <md-icon>language</md-icon>
+  </button>
+  <md-menu #langMenu="mdMenu">
+    <button md-menu-item (click)="changeLanguage('en')">English</button>
+    <button md-menu-item (click)="changeLanguage('it')">Italian</button>
+  </md-menu>
+
+  <button md-icon-button [mdMenuTriggerFor]="appMenu">
+    <md-icon>more_vert</md-icon>
+  </button>
+  <md-menu #appMenu="mdMenu">
+    <a md-menu-item href="" routerLink="/settings">
+      <md-icon>settings</md-icon>
+      <span>Settings</span>
+    </a>
+    <a md-menu-item href="" routerLink="/about">
+      <md-icon>info_outline</md-icon>
+      <span>About</span>
+    </a>
+    <button md-menu-item (click)="onLogout($event)">
+      <md-icon>exit_to_app</md-icon>
+      <span>Logout</span>
+    </button>
+  </md-menu>
+</md-toolbar>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+{
+  "ecmHost": "http://localhost:3000/ecm",
+  "bpmHost": "http://localhost:3000/bpm",
+    "application": {
+        "name": "Alfresco"
+    },
+    "pagination": {
+        "size": 25
+    },
+    "files": {
+            "excluded": [".DS_Store", "desktop.ini", ".git"]
+    },
+    "leaveRequestAppId": "1001",
+    "leaveRequestProcessDefinitionKey": "LeaveRequest",
+    "leaveDetailsFormId": "2002",
+    "leaveRequestDocFolderNodeId":"ad576d3d-3aa5-4f8e-9203-fc406e8a05d1"
+}
