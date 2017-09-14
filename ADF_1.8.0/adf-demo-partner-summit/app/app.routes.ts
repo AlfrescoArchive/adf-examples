@@ -43,7 +43,7 @@ export const appRoutes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'settings', component: SettingsComponent},
   {path: 'process-services', component: ProcessServicesComponent, canActivate: [AuthGuardBpm]},
-  {path: 'new-leave-request', component: NewLeaveRequestComponent, canActivate: [AuthGuardBpm]}
+  {path: 'new-leave-request', component: NewLeaveRequestComponent, canActivate: [AuthGuardBpm]},
   {path: 'leave-requests', component: LeaveRequestsComponent, canActivate: [AuthGuardBpm]}
 ];
 
