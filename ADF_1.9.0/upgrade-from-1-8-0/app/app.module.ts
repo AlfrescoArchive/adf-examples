@@ -40,8 +40,8 @@ import { ActivitiProcessListModule } from 'ng2-activiti-processlist';
 import { AnalyticsModule } from 'ng2-activiti-analytics';
 import { DiagramsModule } from 'ng2-activiti-diagrams';
 import { FormListDemoComponent } from './components/form/form-list-demo.component';
-  import { LoginModule } from 'ng2-alfresco-login';
-import { UserInfoComponentModule } from 'ng2-alfresco-userinfo';
+import { LoginModule } from 'ng2-alfresco-login';
+import { UserInfoModule } from 'ng2-alfresco-userinfo';
 import { ViewerModule } from 'ng2-alfresco-viewer';
 import { AppComponent } from './app.component';
 import { routing } from './app.routes';
@@ -74,26 +74,22 @@ if (process.env.ENV === 'production') {
     imports: [
         BrowserModule,
         routing,
-        CoreModule.forRoot({
-          appConfigFile: appConfigFile
-        }),
-        DataTableModule.forRoot(),
-        SearchModule.forRoot(),
-        
-        DocumentListModule.forRoot(),
+        CoreModule,
+        DataTableModule,
+        SearchModule,
+        DocumentListModule,
         MaterialModule,
-        UploadModule.forRoot(),
-        ViewerModule.forRoot(),
-        ActivitiFormModule.forRoot(),
-        
-        ActivitiTaskListModule.forRoot(),
-        ActivitiProcessListModule.forRoot(),
-        AnalyticsModule.forRoot(),
-        DiagramsModule.forRoot(), 
-        LoginModule.forRoot(),
-        UserInfoComponentModule.forRoot(),
-        Editor3DModule.forRoot(),
-        TagModule.forRoot(),
+        UploadModule,
+        ViewerModule,
+        ActivitiFormModule,
+        ActivitiTaskListModule,
+        ActivitiProcessListModule,
+        AnalyticsModule,
+        DiagramsModule, 
+        LoginModule,
+        UserInfoModule,
+        Editor3DModule,
+        TagModule,
         ThemePickerModule
     ],
     declarations: [
@@ -105,7 +101,7 @@ if (process.env.ENV === 'production') {
         ActivitiTaskAttachmentsComponent,
         ActivitiProcessAttachmentsComponent,
         ActivitiAppsViewComponent,
-        ActivitiShowDiagramComponent
+        ActivitiShowDiagramComponent,
         FormViewerComponent,
         FormListDemoComponent,
         FormNodeViewerComponent,
