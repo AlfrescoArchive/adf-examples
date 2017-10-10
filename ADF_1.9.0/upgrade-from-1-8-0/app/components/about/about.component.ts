@@ -86,7 +86,6 @@ export class AboutComponent implements OnInit {
             ]);
         });
 
-        this.configFile = this.appConfig.configFile;
         this.ecmHost = this.appConfig.get<string>('ecmHost');
         this.bpmHost = this.appConfig.get<string>('bpmHost');
     }
