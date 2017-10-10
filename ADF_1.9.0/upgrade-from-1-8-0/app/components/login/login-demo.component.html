@@ -1,0 +1,95 @@
+<!--Content Services, Process Services AND CSRF TOGGLE-->
+
+<div class="settings">
+    <p class="toggle">
+        <md-slide-toggle
+            id="switch1"
+            [color]="'primary'"
+            (change)="toggleECM()"
+            [checked]="isECM">
+            Content Services
+        </md-slide-toggle>
+    </p>
+    <p class="toggle">
+        <md-slide-toggle
+            id="switch2"
+            [color]="'primary'"
+            (change)="toggleBPM()"
+            [checked]="isBPM">
+            Process Services
+        </md-slide-toggle>
+    </p>
+    <p class="toggle">
+        <md-slide-toggle
+            id="switch3"
+            [color]="'primary'"
+            (change)="toggleCSRF()"
+            [checked]="!disableCsrf">
+            CSRF
+        </md-slide-toggle>
+    </p>
+    <p class="toggle">
+        <md-slide-toggle
+            id="switch4"
+            [color]="'primary'"
+            (change)="toggleFooter()"
+            [checked]="showFooter">
+            Login footer
+        </md-slide-toggle>
+    </p>
+</div>
+
+<!--SETTING BUTTON-->
+
+<a md-fab class="setting-button" data-automation-id="settings" href="" routerLink="/settings" >
+    <md-icon>settings</md-icon>
+</a>
+
+<alfresco-login #alfrescologin
+                [providers]="providers"
+                [fieldsValidation]="customValidation"
+                [disableCsrf]="disableCsrf"
+                [showLoginActions]="showFooter"
+                [showRememberMe]="showFooter"
+                copyrightText="© 2016 Alfresco Software, Inc. All Rights Reserved. (customised text)"
+                (onSuccess)="onLogin($event)"
+                (onError)="onError($event)">
+    <div class="mobile-settings">
+        <p>
+            <md-slide-toggle
+                id="switch1-mobile"
+                [color]="'primary'"
+                (click)="toggleECM()"
+                [checked]="isECM">
+                Content Services
+            </md-slide-toggle>
+        </p>
+        <p>
+            <md-slide-toggle
+                id="switch2-mobile"
+                [color]="'primary'"
+                (click)="toggleBPM()"
+                [checked]="isBPM">
+                Process Services
+            </md-slide-toggle>
+        </p>
+        <p>
+            <md-slide-toggle
+                id="switch3-mobile"
+                [color]="'primary'"
+                (click)="toggleCSRF()"
+                [checked]="!disableCsrf">
+                CSRF
+            </md-slide-toggle>
+        </p>
+        <p>
+            <md-slide-toggle
+                id="switch4-mobile"
+                [color]="'primary'"
+                (click)="toggleFooter()"
+                [checked]="showFooter">
+                Login footer
+            </md-slide-toggle>
+        </p>
+    </div>
+</alfresco-login>
