@@ -1,0 +1,61 @@
+<div class="adf-setting-container">
+    <div class="adf-setting-card-padding"></div>
+    <md-toolbar color="primary" >
+        <h3>{{'SETTINGS.TITLE' | translate}}</h3>
+    </md-toolbar>
+
+    <md-card class="adf-setting-card">
+        <md-card-content>
+
+            <md-card-subtitle>{{'SETTINGS.CS-HOST' | translate }}</md-card-subtitle>
+
+            <md-input-container class="full-width">
+                <md-icon mdPrefix>link</md-icon>
+                <input mdInput
+                       [formControl]="urlFormControlEcm"
+                       data-automation-id="ecmHost"
+                       type="text"
+                               (change)="onChangeECMHost($event)"
+                       tabindex="2"
+                            id="ecmHost"
+                            value="{{ecmHost}}"
+                            placeholder="http(s)://host|ip:port(/path)">
+                <md-error *ngIf="urlFormControlEcm.hasError('pattern')">
+                    ECM host is not valid! http(s)://host|ip:port(/path)
+                </md-error>
+            </md-input-container>
+            <p>
+            <p>
+            <md-card-subtitle>{{'SETTINGS.BP-HOST' | translate }}</md-card-subtitle>
+
+            <md-input-container class="full-width">
+                <md-icon mdPrefix>link</md-icon>
+                <input mdInput
+                       [formControl]="urlFormControlBpm"
+                            data-automation-id="bpmHost"
+                               type="text"
+                               (change)="onChangeBPMHost($event)"
+                            tabindex="2"
+                            id="bpmHost"
+                            value="{{bpmHost}}"
+                            placeholder="http(s)://host|ip:port(/path)">
+                <md-error *ngIf="urlFormControlBpm.hasError('pattern')">
+                    BPM host is not valid! http(s)://host|ip:port(/path)
+                </md-error>
+            </md-input-container>
+
+        </md-card-content>
+        <md-card-actions>
+
+            <button md-button onclick="window.history.back()" color="primary">
+                {{'SETTINGS.BACK' | translate }}
+            </button>
+
+            <button md-button onclick="window.location.href = '/'" color="primary">
+                {{'SETTINGS.APPLY' | translate }}
+            </button>
+
+        </md-card-actions>
+    </md-card>
+    <div class="adf-setting-card-padding"></div>
+</div>
