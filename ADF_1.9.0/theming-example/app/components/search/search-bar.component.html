@@ -1,0 +1,14 @@
+<adf-search-control *ngIf="isLoggedIn()"
+                         [searchTerm]="searchTerm"
+                         [autocomplete]="false"
+                         [highlight]="true"
+                         (searchSubmit)="onSearchSubmit($event);"
+                         (searchChange)="onSearchTermChange($event);"
+                         (fileSelect)="onItemClicked($event)">
+</adf-search-control>
+
+<adf-viewer *ngIf="fileShowed" [(showViewer)]="fileShowed"
+                 [fileNodeId]="fileNodeId"
+                 [overlayMode]="true">
+    <md-spinner></md-spinner>
+</adf-viewer>

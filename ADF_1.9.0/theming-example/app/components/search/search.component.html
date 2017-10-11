@@ -1,0 +1,14 @@
+<div class="search-results-container">
+    <div class="adf-search-title">Search results</div>
+    <adf-search
+        [navigate]="false"
+        (nodeDbClick)="nodeDbClick($event)"></adf-search>
+</div>
+
+<div *ngIf="fileShowed">
+    <adf-viewer [(showViewer)]="fileShowed"
+                   [fileNodeId]="fileNodeId"
+                   [overlayMode]="true">
+        <md-spinner></md-spinner>
+    </adf-viewer>
+</div>
