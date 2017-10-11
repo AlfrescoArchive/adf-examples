@@ -90,6 +90,7 @@ $primary: mat-palette($md-mycustomprimary);
 $accent:  mat-palette($md-mycustomaccent);
 $warn:    mat-palette($alfresco-warn);
 $theme:   mat-light-theme($primary, $accent, $warn);
+//$theme:   mat-dark-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
 @include adf-app-layout-theme($theme);
