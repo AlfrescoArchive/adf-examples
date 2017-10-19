@@ -1,0 +1,24 @@
+<div fxLayout='row' fxLayoutAlign="start stretch" class="rad-container">
+    <div fxFlex="10">
+        <rad-component-list (create)="onComponentCreation($event)"></rad-component-list>
+    </div>
+    <div fxFlex="60">
+        <md-card>
+            <md-card-content>
+                <div #componentsContainer>
+
+                </div>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div fxFlex="30">
+        <md-card class="rad-component-properties">
+            <md-card-content>
+                <project-rad-inspector
+                [actualComponent]="componentName"
+                (changed)="propertyChange($event)">
+            </project-rad-inspector>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

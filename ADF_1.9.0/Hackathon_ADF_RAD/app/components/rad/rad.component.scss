@@ -1,0 +1,12 @@
+.rad-container {
+    height: calc(100% - 64px);
+
+    md-card {
+        height: 100%;
+        padding: 0px;
+
+        md-card-content {
+            height: 100%;
+        }
+    }
+}
