@@ -8,6 +8,7 @@ app/**/*.d.ts
 
 !app/js/Polyline.js
 .idea
+.history
 versions.json
 dist/
 coverage/

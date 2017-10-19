@@ -44,6 +44,8 @@ import 'material-design-lite/material.js';
 import 'ng2-activiti-form/stencils/runtime.adf';
 import 'ng2-activiti-form/stencils/runtime.ng1';
 
+import 'codemirror/theme/solarized.css';
+
 import 'chart.js';
 import 'ng2-charts';
 require('script-loader!raphael/raphael.min.js');
