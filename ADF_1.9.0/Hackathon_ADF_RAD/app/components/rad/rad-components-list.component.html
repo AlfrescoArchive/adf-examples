@@ -1,0 +1,11 @@
+<md-card class="rad-component-list">
+    <md-card-content>
+        <md-nav-list>
+            <md-list-item *ngFor="let component of components">
+                <button md-icon-button (click)="createComponent(component.type)">
+                    {{ component.name }} <md-icon>view_module</md-icon>
+                </button>
+            </md-list-item>
+        </md-nav-list>
+    </md-card-content>
+</md-card>

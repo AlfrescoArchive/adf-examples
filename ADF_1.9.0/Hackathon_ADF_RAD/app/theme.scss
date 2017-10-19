@@ -13,71 +13,6 @@
 @import '~ng2-alfresco-userinfo/styles/index';
 @import '~ng2-alfresco-search/styles/index';
 
-$md-mycustomprimary: (
-    50 : #e8eaf6,
-    100 : #c5cae9,
-    200 : #9fa8da,
-    300 : #7986cb,
-    400 : #5c6bc0,
-    500 : #3f51b5,
-    600 : #3949ab,
-    700 : #303f9f,
-    800 : #283593,
-    900 : #1a237e,
-    A100 : #8c9eff,
-    A200 : #536dfe,
-    A400 : #3d5afe,
-    A700 : #304ffe,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #ffffff,
-        400 : #ffffff,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #ffffff,
-        A400 : #ffffff,
-        A700 : #ffffff,
-    )
-);
-
-$md-mycustomaccent: (
-    50 : #fdf3e3,
-    100 : #fbe1b8,
-    200 : #f9ce89,
-    300 : #f6ba59,
-    400 : #f4ab36,
-    500 : #f29c12,
-    600 : #f09410,
-    700 : #ee8a0d,
-    800 : #ec800a,
-    900 : #e86e05,
-    A100 : #ffffff,
-    A200 : #ffebdd,
-    A400 : #ffcdaa,
-    A700 : #ffbe91,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
-        900 : #000000,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
-);
 
 @include mat-core();
 
@@ -86,13 +21,13 @@ $custom-typography: mat-typography-config(
 );
 @include angular-material-typography($custom-typography);
 
-$primary: mat-palette($md-mycustomprimary);
-$accent:  mat-palette($md-mycustomaccent);
+$primary: mat-palette($alfresco-accent-orange);
+$accent:  mat-palette($alfresco-accent-purple);
 $warn:    mat-palette($alfresco-warn);
 $theme:   mat-light-theme($primary, $accent, $warn);
-//cc$theme:   mat-dark-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
+
 @include adf-app-layout-theme($theme);
 @include alfresco-core-theme($theme);
 @include alfresco-activity-analytics-theme($theme);

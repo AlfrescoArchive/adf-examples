@@ -1,0 +1,19 @@
+<div class="rad-inspector-editor">
+    <div *ngIf="actualComponent === 'DocumentListComponent'">
+        <codemirror 
+            [(ngModel)]="code" 
+            [config]="config" 
+            (blur)="onDocumentListPopertyChange($event)">
+        </codemirror>
+        <md-select placeholder="Item source" class="source-chooser" [(ngModel)]="selectedSource" (change)="onDocumentListPopertyChange($event)">
+            <md-option *ngFor="let source of sources" [value]="source">
+                {{ source }}
+            </md-option>
+        </md-select>    
+    </div>
+    <div *ngIf="actualComponent === 'ToolbarComponent'">
+        <md-form-field class="example-full-width">
+            <input mdInput placeholder="Title Toolbar" [(ngModel)]="titleToolbar" (blur)="onToolbarComponentChange()">
+        </md-form-field>
+    </div>
+</div>
