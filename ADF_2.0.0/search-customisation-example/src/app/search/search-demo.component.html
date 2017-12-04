@@ -1,3 +1,37 @@
 <div>
-  <span>Hi! I am the search demo component!</span>
+    <h3>Example of how customise search results</h3>
+
+    <div id="container-for-custom-input">
+        <span> Try to perform a search : </span>
+        <input matInput
+              type="text"
+              id="custom-input"
+              [(ngModel)]="searchTerm"
+              [searchAutocomplete]="auto">
+    </div>
+    <div>
+      <adf-search #auto="searchAutocomplete">
+        <ng-template let-data>
+            <mat-list>
+                <mat-list-item
+                    *ngFor="let item of data?.list?.entries; let idx = index"
+                    id="result_option_{{idx}}">
+                    <h4 mat-line id="result_name_{{idx}}"
+                        class="adf-search-fixed-text">
+                        {{ item?.entry.name }}
+                    </h4>
+                    <p mat-line class="adf-search-fixed-text"> {{item?.entry.createdByUser.displayName}} </p>
+                </mat-list-item>
+                <mat-list-item
+                    id="search_no_result"
+                    data-automation-id="search_no_result_found"
+                    *ngIf="data?.list?.entries.length === 0">
+                    <p mat-line class="adf-search-fixed-text">{{ 'SEARCH.RESULTS.NONE' | translate:{searchTerm: searchTerm} }}</p>
+                </mat-list-item>
+            </mat-list>
+        </ng-template>
+      </adf-search>
+    </div>
 </div>
+
+

@@ -9,7 +9,8 @@ import { SearchComponent } from '@alfresco/adf-content-services';
 })
 export class SearchDemoComponent implements OnInit {
 
+  searchTerm = '';
+
   ngOnInit() {
-    console.log('INIZ');
   }
 }
