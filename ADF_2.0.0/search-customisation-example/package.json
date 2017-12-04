@@ -8,6 +8,8 @@
     "ng": "ng",
     "start": "ng serve --open",
     "build": "ng build",
+    "clean": "npm run clean-build  && rimraf dist node_modules typings dist",
+    "clean-build": "rimraf 'app/{,**/}**.js' 'app/{,**/}**.js.map' 'app/{,**/}**.d.ts'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

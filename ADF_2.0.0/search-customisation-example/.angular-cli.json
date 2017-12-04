@@ -90,7 +90,7 @@
     },
     "serve": {
       "proxyConfig": "proxy.conf.json",
-      "port": 4200
+      "port": 3000
     }
   }
 }

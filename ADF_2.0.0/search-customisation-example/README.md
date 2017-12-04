@@ -1,56 +1,98 @@
-# ADF/ACS Application with Angular CLI
+# Search Customisation Example
+Search Customisation Example
 
-Minimal ready-to-use Angular CLI project template pre-configured with ADF 2.0.0 components.
+## Prerequisites
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0
+Before you start using this development framework, make sure you have installed all required software and done all the
+necessary configuration, see this [page](https://github.com/Alfresco/alfresco-ng2-components/blob/master/PREREQUISITES.md).
 
-## Quick start
+## Building and Running
+
+Install dependencies
 
 ```sh
 npm install
+```
+
+### Development build
+
+```sh
 npm start
 ```
 
-## Supported ADF component libraries
+This command compiles and starts the project in watch mode.
+Browser will automatically reload upon changes.
+Upon start you can navigate to `http://localhost:3000` with your preferred browser.
 
-This project has all the existing ADF component libraries already pre-configured.
+#### Important notes
 
-The main focus of the project is:
+This script is recommended for development environment and not suited for headless servers and network access.
 
-- ADF integration and setup
-- Basic demonstration of working components
+### Production build
 
-## Development server
+```sh
+npm run build
+npm run start:dist
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This command builds project in `production` mode.
+All output is placed to `dist` folder and can be served your preferred web server.
+You should need no additional files outside the `dist` folder.
 
-### Proxy settings
+#### Important notes
 
-The template provides certain proxy settings to allow running web application locally without CORS setup.
-You can find details in the `proxy.conf.json` file.
+By default demo application is configured to use [wsrv](https://www.npmjs.com/package/wsrv) tool (lightweight web server)
+to serve production build output. It will be running at `0.0.0.0` address with port `3000` and allow you accessing your application
+via network. However you can use any web server of your choice in production.
 
-List of URLs being proxied:
+## i18n support
 
-- `/alfresco` -> `http://0.0.0.0:8080`
-- `/activiti-app` -> `http://0.0.0.0:9999`
+To support a new language you need to create your language file (.json) and add it to `i18n/` folder.
 
-## Code scaffolding
+```json
+{
+        "username" : "Username",
+        "input-required-message": "Required",
+        "input-min-message": "Your username needs to be at least 4 characters.",
+        "login-button": "Login"
+}
+```
 
-Run `ng generate component component-name -m app.module` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Directory structure:
+```
+.
+├── custom-translation/
+│   ├──i18n/
+│      ├──
+│      ├── en.json
+│      ├── it.json
+│      └── fr.json
+```
 
-## Build
+## Custom-files
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+If you need to add custom files on your project you can add this files in the folders public
 
-## Running unit tests
+```
+.
+├── public/
+│   ├── images/
+│   ├── css/
+│   └── js/
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+the public folder above wil be copied in the root of your project and you can refer to them for example as
 
-## Running end-to-end tests
+ * './images/custom_image.png'
+ * './js/custom_script.js'
+ * './css/custom_style.css'
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+ 
+## History
 
-## Further help
+For detailed changelog, check [Releases](https://github.com/eromano/theming-example/releases).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Contributors
+
+[Contributors](https://github.com/eromano/theming-example/graphs/contributors)
+  
