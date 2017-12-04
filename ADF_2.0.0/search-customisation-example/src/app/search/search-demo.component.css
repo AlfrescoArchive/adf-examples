@@ -10,7 +10,7 @@
 }
 
 .example-header-image {
-  background-image: url('https://free.clipartof.com/49-Free-Cartoon-Cow-Clip-Art.jpg');
+  background-image: url('../../assets/cowProfile.jpg');
   background-size: cover;
   margin-bottom: 15px;
 }
