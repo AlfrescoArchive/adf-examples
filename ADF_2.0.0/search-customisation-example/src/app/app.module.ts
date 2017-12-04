@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { DocumentlistComponent } from './documentlist/documentlist.component';
+import { SearchDemoComponent } from './search/search-demo.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,11 @@ const appRoutes: Routes = [
   {
     path: 'documentlist',
     component: DocumentlistComponent,
+    canActivate: [ AuthGuardEcm ]
+  },
+    {
+    path: 'search',
+    component: SearchDemoComponent,
     canActivate: [ AuthGuardEcm ]
   }
 ];
@@ -46,6 +52,7 @@ const appRoutes: Routes = [
     HomeComponent,
     LoginComponent,
     DocumentlistComponent,
+    SearchDemoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
