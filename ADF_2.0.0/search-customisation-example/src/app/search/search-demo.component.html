@@ -5,30 +5,33 @@
         <span> Try to perform a search : </span>
         <input matInput
               type="text"
+              class="example-search-input"
               id="custom-input"
               [(ngModel)]="searchTerm"
               [searchAutocomplete]="auto">
     </div>
     <div>
-      <adf-search #auto="searchAutocomplete">
+      <adf-search #auto="searchAutocomplete" class="example-card-search-container">
         <ng-template let-data>
-            <mat-list>
-                <mat-list-item
-                    *ngFor="let item of data?.list?.entries; let idx = index"
-                    id="result_option_{{idx}}">
-                    <h4 mat-line id="result_name_{{idx}}"
-                        class="adf-search-fixed-text">
-                        {{ item?.entry.name }}
-                    </h4>
-                    <p mat-line class="adf-search-fixed-text"> {{item?.entry.createdByUser.displayName}} </p>
-                </mat-list-item>
-                <mat-list-item
-                    id="search_no_result"
-                    data-automation-id="search_no_result_found"
-                    *ngIf="data?.list?.entries.length === 0">
-                    <p mat-line class="adf-search-fixed-text">{{ 'SEARCH.RESULTS.NONE' | translate:{searchTerm: searchTerm} }}</p>
-                </mat-list-item>
-            </mat-list>
+            <mat-card class="example-card"
+                      *ngFor="let item of data?.list?.entries; let idx = index"
+                      (click)="onClick(item)">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{ item?.entry.name }}</mat-card-title>
+                  <mat-card-subtitle>{{ item?.entry.createdAt }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="getMimeTypeIcon(item)">
+                <mat-card-content>
+                  <p>
+                      Created By: {{item?.entry.createdByUser.displayName}}
+                  </p>
+                </mat-card-content>
+              </mat-card>
+              <mat-card class="example-card" id="search_no_result"
+                        *ngIf="data?.list?.entries.length === 0">
+                 <p mat-line class="adf-search-fixed-text">{{ 'SEARCH.RESULTS.NONE' | translate:{searchTerm: searchTerm} }}</p>
+              </mat-card>
         </ng-template>
       </adf-search>
     </div>
