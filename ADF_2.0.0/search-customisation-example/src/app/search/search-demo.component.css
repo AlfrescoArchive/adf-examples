@@ -1,0 +1,22 @@
+.example-card {
+  width: 200px;
+  flex: 0 20%;
+  margin: 15px;
+}
+
+.example-card-search-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example-header-image {
+  background-image: url('../../assets/cowProfile.jpg');
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+.example-search-input {
+    width: 100px;
+    border: 1 solid;
+    border-color: black;
+}
