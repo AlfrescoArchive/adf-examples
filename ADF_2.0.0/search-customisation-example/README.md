@@ -1,6 +1,9 @@
 # Search Customisation Example
 Search Customisation Example
 
+![Search Custom result example](https://github.com/Alfresco/adf-examples/blob/master/ADF_2.0.0/search-customisation-example/src/assets/SearchCardsJpg.jpg "Search Custom result example")
+
+
 ## Prerequisites
 
 Before you start using this development framework, make sure you have installed all required software and done all the
