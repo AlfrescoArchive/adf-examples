@@ -1,6 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { NotificationService, ThumbnailService } from '@alfresco/adf-core';
-import { SearchComponent } from '@alfresco/adf-content-services';
+import { ThumbnailService } from '@alfresco/adf-core';
 import { MinimalNodeEntity } from 'alfresco-js-api';
 
 @Component({
