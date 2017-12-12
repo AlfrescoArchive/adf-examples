@@ -10,21 +10,10 @@ const path = require('path');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 const alfrescoLibs = [
-    'ng2-activiti-analytics',
-    'ng2-activiti-diagrams',
-    'ng2-activiti-form',
-    'ng2-activiti-processlist',
-    'ng2-activiti-tasklist',
-    'ng2-alfresco-core',
-    'ng2-alfresco-datatable',
-    'ng2-alfresco-documentlist',
-    'ng2-alfresco-login',
-    'ng2-alfresco-search',
-    'ng2-alfresco-tag',
-    'ng2-alfresco-upload',
-    'ng2-alfresco-userinfo',
-    'ng2-alfresco-viewer',
-    'ng2-alfresco-webscript'
+    '@alfresco/adf-core',
+    '@alfresco/adf-content-services',
+    '@alfresco/adf-process-services',
+    '@alfresco/adf-insights'
 ];
 
 module.exports = webpackMerge(commonConfig, {
@@ -88,56 +77,56 @@ module.exports = webpackMerge(commonConfig, {
 
         new CopyWebpackPlugin([
             ... alfrescoLibs.map(lib => {
-                return {
-                    context: `node_modules/${lib}/bundles/assets/`,
-                    from: '**/*',
-                    to: `assets/`
-                }
-            })
-        ]),
-        new CopyWebpackPlugin([
-            {
-                context: `node_modules/ng2-alfresco-core/prebuilt-themes/`,
-                from: '**/*.css',
-                to: 'prebuilt-themes'
-            }
-        ]),
-        new webpack.NoEmitOnErrorsPlugin(),
-        new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
-            mangle: {
-                keep_fnames: true
-            },
-            compress: {
-                warnings: false
-            },
-            output: {
-                comments: false
-            },
-            sourceMap: true
-        }),
-        new ExtractTextPlugin('[name].[hash].css'),
-        new webpack.DefinePlugin({
-            'process.env': {
-                'ENV': JSON.stringify(ENV)
-            }
-        }),
-        new CopyWebpackPlugin([
-            ... alfrescoLibs.map(lib => {
-                return {
-                    context: `../ng2-components/${lib}/src/i18n/`,
-                    from: '**/*',
-                    to: `assets/${lib}/i18n/`
-                }
-            }),
-            {
-                from: 'app.config-prod.json',
-                to: 'app.config.json'
-            }
-        ]),
-        new webpack.LoaderOptionsPlugin({
-            htmlLoader: {
-                minimize: false // workaround for ng2
+            return {
+                context: `node_modules/${lib}/bundles/assets/`,
+                from: '**/*',
+                to: `assets/`
             }
         })
-    ]
-});
+    ]),
+    new CopyWebpackPlugin([
+        {
+            context: `node_modules/@alfresco/adf-core/prebuilt-themes/`,
+            from: '**/*.css',
+            to: 's'
+        }
+    ]),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+        mangle: {
+            keep_fnames: true
+        },
+        compress: {
+            warnings: false
+        },
+        output: {
+            comments: false
+        },
+        sourceMap: true
+    }),
+    new ExtractTextPlugin('[name].[hash].css'),
+    new webpack.DefinePlugin({
+        'process.env': {
+            'ENV': JSON.stringify(ENV)
+        }
+    }),
+    new CopyWebpackPlugin([
+        ... alfrescoLibs.map(lib => {
+        return {
+            context: `../node_modules/${lib}/i18n/`,
+            from: '**/*',
+            to: `assets/${lib}/i18n/`
+        }
+    }),
+    {
+        from: 'app.co' +
+        'nfig-prod.json',
+        to: 'app.config.json'
+    }
+]),
+new webpack.LoaderOptionsPlugin({
+    htmlLoader: {
+        minimize: false // workaround for ng2
+    }
+})]
+})

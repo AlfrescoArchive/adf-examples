@@ -23,7 +23,7 @@ module.exports = {
             {
                 enforce: 'pre',
                 test: /\.js$/,
-                include: [helpers.root('app'), helpers.root('../ng2-components')],
+                include: [helpers.root('app'), helpers.root('../lib')],
                 loader: 'source-map-loader',
                 exclude: [/node_modules/, /public/, /resources/, /dist/]
             },
@@ -46,13 +46,13 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                include: [helpers.root('app'), helpers.root('../ng2-components')],
+                include: [helpers.root('app'), helpers.root('../lib')],
                 loader: 'html-loader',
                 exclude: [/node_modules/, /public/, /resources/, /dist/]
             },
             {
                 test: /\.css$/,
-                exclude: [helpers.root('app'), helpers.root('../ng2-components')],
+                exclude: [helpers.root('app'), helpers.root('../lib')],
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: 'css-loader?sourceMap'
@@ -60,33 +60,21 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                include: [helpers.root('app'), helpers.root('../ng2-components')],
+                include: [helpers.root('app'), helpers.root('../lib')],
                 loader: 'raw-loader'
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
                 loader: 'file-loader?name=assets/[name].[hash].[ext]'
             }
-            //,{
-            //    enforce: 'pre',
-            //    test: /\.ts$/,
-            //    loader: 'license-check',
-            //    include: helpers.root('app'),
-            //    options: {
-            //        emitErrors: true,
-            //        licenseFile: path.resolve(__dirname, '../assets/license_header.txt')
-            //    },
-            //    exclude: [/node_modules/, /bundles/, /dist/, /demo/]
-            //}
         ]
     },
 
     plugins: [
         new webpack.ContextReplacementPlugin(
             // The (\\|\/) piece accounts for path separators in *nix and Windows
-            /angular(\\|\/)core(\\|\/)@angular/,
-            helpers.root('./app'), // location of your src
-            {} // a map of your routes
+            /angular(\\|\/)core(\\|\/)(@angular|esm5)/,
+            path.resolve(__dirname, '../src')
         ),
         new HtmlWebpackPlugin({
             template: './index.html'
@@ -142,56 +130,56 @@ module.exports = {
         })
     ],
 
-     devServer: {
-            contentBase: helpers.root('dist'),
-            compress: true,
-            port: 3000,
-            historyApiFallback: true,
-            host: '0.0.0.0',
-            inline: true,
-            proxy: {
-                '/ecm': {
-                    target: {
-                        host: "0.0.0.0",
-                        protocol: 'http:',
-                        port: 8080
-                    },
-                    pathRewrite: {
-                        '^/ecm': ''
-                    },
-                    secure: false,
-                    changeOrigin: true,
-                    // workaround for REPO-2260
-                    onProxyRes: function (proxyRes, req, res) {
-                        const header = proxyRes.headers['www-authenticate'];
-                        if (header && header.startsWith('Basic')) {
-                            proxyRes.headers['www-authenticate'] = 'x' + header;
-                        }
-                    }
+    devServer: {
+        contentBase: helpers.root('dist'),
+        compress: true,
+        port: 3000,
+        historyApiFallback: true,
+        host: '0.0.0.0',
+        inline: true,
+        proxy: {
+            '/ecm': {
+                target: {
+                    host: "0.0.0.0",
+                    protocol: 'http:',
+                    port: 8080
                 },
-                '/bpm': {
-                    target: {
-                        host: "0.0.0.0",
-                        protocol: 'http:',
-                        port: 9999
-                    },
-                    pathRewrite: {
-                        '^/bpm': ''
-                    },
-                    secure: false,
-                    changeOrigin: true,
-                    // workaround
-                    onProxyRes: function (proxyRes, req, res) {
-                        const header = proxyRes.headers['www-authenticate'];
-                        if (header && header.startsWith('Basic')) {
-                            proxyRes.headers['www-authenticate'] = 'x' + header;
-                        }
+                pathRewrite: {
+                    '^/ecm': ''
+                },
+                secure: false,
+                changeOrigin: true,
+                // workaround for REPO-2260
+                onProxyRes: function (proxyRes, req, res) {
+                    const header = proxyRes.headers['www-authenticate'];
+                    if (header && header.startsWith('Basic')) {
+                        proxyRes.headers['www-authenticate'] = 'x' + header;
+                    }
+                }
+            },
+            '/bpm': {
+                target: {
+                    host: "0.0.0.0",
+                    protocol: 'http:',
+                    port: 9999
+                },
+                pathRewrite: {
+                    '^/bpm': ''
+                },
+                secure: false,
+                changeOrigin: true,
+                // workaround
+                onProxyRes: function (proxyRes, req, res) {
+                    const header = proxyRes.headers['www-authenticate'];
+                    if (header && header.startsWith('Basic')) {
+                        proxyRes.headers['www-authenticate'] = 'x' + header;
                     }
                 }
             }
-        },
+        }
+    },
 
-      node: {
-          fs: 'empty'
-      }
+    node: {
+        fs: 'empty'
+    }
 };
