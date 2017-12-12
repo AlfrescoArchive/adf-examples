@@ -36,6 +36,13 @@
                     (click)="onCreateFolderClicked($event)">
                     <mat-icon>create_new_folder</mat-icon>
                 </button>
+
+                <button
+                    mat-icon-button
+                    [adf-create-folder]="getDocumentListCurrentFolderId()">
+                    <mat-icon>create_new_folder</mat-icon>
+                </button>
+
                 <button mat-icon-button
                     [disabled]="!hasSelection(documentList.selection)"
                     title="Download"
@@ -84,7 +91,7 @@
                     <mat-icon>delete</mat-icon>
                     <span>Delete</span>
                 </button>
-            </mat-menu>                    
+            </mat-menu>
         </adf-toolbar>
         <adf-document-list
                 #documentList
@@ -224,7 +231,7 @@
 <div class="adf-content-service-settings">
 
     <p>Current folder ID: {{ documentList.currentFolderId }}</p>
-    
+
     <div class="p-10">
         Selected Nodes:
         <ul>
@@ -233,28 +240,28 @@
             </li>
         </ul>
     </div>
-    
+
     <div class="container">
         <section>
             <mat-slide-toggle [color]="'primary'" [(ngModel)]="multiselect">Multiselect (with checkboxes)</mat-slide-toggle>
         </section>
-    
+
         <section>
             <mat-slide-toggle [color]="'primary'" [(ngModel)]="multipleFileUpload">Multiple File Upload</mat-slide-toggle>
         </section>
-    
+
         <section>
             <mat-slide-toggle [color]="'primary'" [(ngModel)]="folderUpload">Folder upload</mat-slide-toggle>
         </section>
-    
+
         <section>
             <mat-slide-toggle [color]="'primary'" [(ngModel)]="acceptedFilesTypeShow">Custom extensions filter</mat-slide-toggle>
         </section>
-    
+
         <section>
             <mat-slide-toggle [color]="'primary'" [(ngModel)]="versioning">Enable versioning</mat-slide-toggle>
         </section>
-    
+
         <h5>Upload</h5>
         <section *ngIf="acceptedFilesTypeShow">
             <mat-form-field>
@@ -296,7 +303,7 @@
             <mat-checkbox [(ngModel)]="enableUpload">Enable upload (demoing enabled/disabled state only if the permission are not checked dynamically)</mat-checkbox>
         </section>
     </div>
-    
+
     <div class="p-10">
         <p>For 'Multiple' selection mode use Cmd (macOS) or Ctrl (Win) to toggle selection of multiple items.</p>
         <mat-select placeholder="Selection Mode" [(ngModel)]="selectionMode" name="food">
@@ -304,7 +311,7 @@
                 {{mode.viewValue}}
             </mat-option>
         </mat-select>
-    </div>            
+    </div>
 </div>
 
 <file-uploading-dialog #fileDialog></file-uploading-dialog>
