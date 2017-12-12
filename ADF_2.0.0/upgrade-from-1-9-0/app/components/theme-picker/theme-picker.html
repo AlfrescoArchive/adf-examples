@@ -3,15 +3,15 @@
 </button>
 
 <mat-menu class="docs-theme-picker-menu" #themeMenu="matMenu" x-position="before">
-    <button *ngFor="let theme of themes" mat-menu-item (click)="installTheme(theme)" >
+    <mat-list-item *ngFor="let theme of themes"  mat-menu-item (click)="installTheme(theme)" >
         <mat-icon mat-list-icon [matTooltip]="theme.name" class="docs-theme-chosen-icon" [style.color]="theme.accent"
-                  [style.background]="theme.primary"
-                  *ngIf="currentTheme === theme">check_circle
+                 [style.background]="theme.primary"
+                 *ngIf="currentTheme === theme">check_circle
         </mat-icon>
         <mat-icon mat-list-icon [matTooltip]="theme.name" class="docs-theme-chosen-icon" [style.color]="theme.accent"
-                  [style.background]="theme.primary"
-                  *ngIf="currentTheme !== theme">invert_colors
+                 [style.background]="theme.primary"
+                 *ngIf="currentTheme !== theme">invert_colors
         </mat-icon>
         {{theme.name}}
-    </button>
+    </mat-list-item>
 </mat-menu>

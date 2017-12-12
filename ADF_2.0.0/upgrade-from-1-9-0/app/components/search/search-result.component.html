@@ -1,0 +1,18 @@
+<adf-search [searchTerm]="searchedWord"
+            [maxResults]="maxItems"
+            [skipResults]="skipCount"
+            (resultLoaded)="onSearchResultLoaded($event)"
+            #search>
+</adf-search>
+
+<adf-files-component
+    [currentFolderId]="null"
+        [nodeResult]="resultNodePageList"
+        [disableDragArea]="true"
+        [pagination]="pagination"
+        (changedPageSize)="onRefreshPagination($event)"
+        (changedPageNumber)="onRefreshPagination($event)"
+        (turnedNextPage)="onRefreshPagination($event)"
+        (loadNext)="onRefreshPagination($event)"
+        (turnedPreviousPage)="onRefreshPagination($event)">
+</adf-files-component>

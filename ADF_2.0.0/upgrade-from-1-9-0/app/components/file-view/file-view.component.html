@@ -1,0 +1,9 @@
+<ng-container *ngIf="nodeId">
+    <adf-viewer [fileNodeId]="nodeId">
+        <adf-viewer-extension [supportedExtensions]="['obj','3DS']" #extension>
+            <ng-template let-urlFileContent="urlFileContent" let-extension="extension" >
+                <threed-viewer [urlFile]="urlFileContent" [extension]="extension" ></threed-viewer>
+            </ng-template>
+        </adf-viewer-extension>
+    </adf-viewer>
+</ng-container>
