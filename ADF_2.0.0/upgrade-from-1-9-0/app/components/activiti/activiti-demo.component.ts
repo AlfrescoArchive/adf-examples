@@ -25,7 +25,6 @@ import {
     FormService, ValidateDynamicTableRowEvent
 } from '@alfresco/adf-core';
 import {
-    any,
     ProcessFiltersComponent,
     ProcessInstance,
     ProcessInstanceDetailsComponent,
