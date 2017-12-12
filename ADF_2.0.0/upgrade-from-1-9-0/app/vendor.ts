@@ -16,33 +16,10 @@ import 'hammerjs';
 
 // Alfresco
 import 'alfresco-js-api';
-import 'ng2-activiti-analytics';
-import 'ng2-activiti-diagrams';
-import 'ng2-activiti-form';
-import 'ng2-activiti-processlist';
-import 'ng2-activiti-tasklist';
-import 'ng2-alfresco-core';
-import 'ng2-alfresco-datatable';
-import 'ng2-alfresco-documentlist';
-import 'ng2-alfresco-login';
-import 'ng2-alfresco-search';
-import 'ng2-alfresco-social';
-import 'ng2-alfresco-tag';
-import 'ng2-alfresco-upload';
-import 'ng2-alfresco-userinfo';
-import 'ng2-alfresco-viewer';
-import 'ng2-alfresco-webscript';
-
-// Polyfill(s) for dialogs
-require('script-loader!dialog-polyfill/dialog-polyfill');
-import 'dialog-polyfill/dialog-polyfill.css';
-
-// Google Material Design Lite
-import 'material-design-lite/dist/material.orange-blue.min.css';
-import 'material-design-lite/material.js';
-
-import 'ng2-activiti-form/stencils/runtime.adf';
-import 'ng2-activiti-form/stencils/runtime.ng1';
+import '@alfresco/adf-core';
+import '@alfresco/adf-content-services';
+import '@alfresco/adf-process-services';
+import '@alfresco/adf-insights';
 
 import 'chart.js';
 import 'ng2-charts';
@@ -57,9 +34,3 @@ let pdfjsLib = require('pdfjs-dist');
 pdfjsLib.PDFJS.workerSrc = 'pdf.worker.js';
 
 require('pdfjs-dist/web/pdf_viewer.js');
-
-
-// 3D viewer
-require('three/build/three.min.js');
-import 'ng2-3d-editor';
-import 'three';
