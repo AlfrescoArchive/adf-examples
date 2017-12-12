@@ -162,12 +162,12 @@ export class ActivitiDemoComponent implements AfterViewInit, OnDestroy, OnInit {
         });
 
         formService.validateDynamicTableRow.subscribe(
-            (e: ValidateDynamicTableRowEvent) => {
-                const row: DynamicTableRow = e.row;
+            (validateDynamicTableRowEvent: ValidateDynamicTableRowEvent) => {
+                const row: DynamicTableRow = validateDynamicTableRowEvent.row;
                 if (row && row.value && row.value.name === 'admin') {
-                    e.summary.isValid = false;
-                    e.summary.text = 'Sorry, wrong value. You cannot use "admin".';
-                    e.preventDefault();
+                    validateDynamicTableRowEvent.summary.isValid = false;
+                    validateDynamicTableRowEvent.summary.message = 'Sorry, wrong value. You cannot use "admin".';
+                    validateDynamicTableRowEvent.preventDefault();
                 }
             }
         );
