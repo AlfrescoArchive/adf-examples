@@ -18,13 +18,13 @@
 import { ChangeDetectorRef, Component, Input, OnInit, Optional, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { MinimalNodeEntity } from 'alfresco-js-api';
+import { SimpleChanges, Output, EventEmitter } from '@angular/core';
+import { MinimalNodeEntity, NodePaging, Pagination } from 'alfresco-js-api';
 import {
-    AlfrescoApiService, ContentService, TranslationService, CreateFolderDialogComponent,
-    DownloadZipDialogComponent, FileUploadEvent, FolderCreatedEvent, NotificationService,
-    SiteModel, UploadService
+    AlfrescoApiService, ContentService, TranslationService, FileUploadEvent, FolderCreatedEvent, NotificationService,
+    SiteModel, UploadService, DataColumn, DataRow, UserPreferencesService
 } from '@alfresco/adf-core';
-import { DataColumn, DataRow } from '@alfresco/adf-core';
+import { DownloadZipDialogComponent} from '@alfresco/adf-content-services';
 import { DocumentListComponent, PermissionStyleModel } from '@alfresco/adf-content-services';
 
 const DEFAULT_FOLDER_TO_SHOW = '-my-';
@@ -36,6 +36,7 @@ const DEFAULT_FOLDER_TO_SHOW = '-my-';
 })
 export class FilesComponent implements OnInit {
     // The identifier of a node. You can also use one of these well-known aliases: -my- | -shared- | -root-
+    @Input()
     currentFolderId: string = DEFAULT_FOLDER_TO_SHOW;
 
     errorMessage: string = null;
@@ -74,6 +75,33 @@ export class FilesComponent implements OnInit {
     @Input()
     enableUpload: boolean = true;
 
+    @Input()
+    nodeResult: NodePaging;
+
+    @Input()
+    pagination: Pagination;
+
+    @Input()
+    disableDragArea = false;
+
+    @Output()
+    documentListReady: EventEmitter<any> = new EventEmitter();
+
+    @Output()
+    changedPageSize: EventEmitter<Pagination> = new EventEmitter();
+
+    @Output()
+    changedPageNumber: EventEmitter<Pagination> = new EventEmitter();
+
+    @Output()
+    turnedNextPage: EventEmitter<Pagination> = new EventEmitter();
+
+    @Output()
+    turnedPreviousPage: EventEmitter<Pagination> = new EventEmitter();
+
+    @Output()
+    loadNext: EventEmitter<Pagination> = new EventEmitter();
+
     @ViewChild(DocumentListComponent)
     documentList: DocumentListComponent;
 
@@ -87,7 +115,27 @@ export class FilesComponent implements OnInit {
                 private dialog: MatDialog,
                 private translateService: TranslationService,
                 private router: Router,
+                private preference: UserPreferencesService,
                 @Optional() private route: ActivatedRoute) {
+    }
+
+    ngOnChanges(changes: SimpleChanges) {
+        if (changes.nodeResult && changes.nodeResult.currentValue) {
+            this.nodeResult = <NodePaging>changes.nodeResult.currentValue;
+            this.pagination = this.nodeResult.list.pagination;
+        }
+        if (!this.pagination) {
+            this.giveDefaultPaginationWhenNotDefined();
+        }
+    }
+
+    giveDefaultPaginationWhenNotDefined() {
+        this.pagination =  <Pagination> {
+            maxItems: this.preference.paginationSize,
+            skipCount: 0,
+            totalItems: 0,
+            hasMoreItems: false
+        };
     }
 
     showFile(event) {
@@ -190,18 +238,6 @@ export class FilesComponent implements OnInit {
 
     onDeleteActionSuccess(message) {
         this.uploadService.fileDeleted.next(message);
-    }
-
-    onCreateFolderClicked(event: Event) {
-        let dialogRef = this.dialog.open(CreateFolderDialogComponent);
-        dialogRef.afterClosed().subscribe(folderName => {
-            if (folderName) {
-                this.contentService.createFolder('', folderName, this.documentList.currentFolderId).subscribe(
-                    node => console.log(node),
-                    err => console.log(err)
-                );
-            }
-        });
     }
 
     getSiteContent(site: SiteModel) {

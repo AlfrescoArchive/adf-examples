@@ -32,11 +32,6 @@
             <adf-toolbar-divider fxFlex="0 0 auto"></adf-toolbar-divider>
 
             <div fxFlex="0 0 auto" class="adf-document-action-buttons" fxShow fxHide.lt-sm="true">
-                <button mat-icon-button
-                    (click)="onCreateFolderClicked($event)">
-                    <mat-icon>create_new_folder</mat-icon>
-                </button>
-
                 <button
                     mat-icon-button
                     [adf-create-folder]="getDocumentListCurrentFolderId()">
@@ -223,6 +218,24 @@
                 </content-action>
             </content-actions>
         </adf-document-list>
+        <adf-pagination
+            #standardPagination
+            *ngIf="!infiniteScrolling"
+            class="adf-documentlist-pagination"
+            [target]="documentList"
+            (changePageSize)="onChangePageSize($event)"
+            (changePageNumber)="onChangePageNumber($event)"
+            (nextPage)="onNextPage($event)"
+            (prevPage)="onPrevPage($event)">
+        </adf-pagination>
+        <adf-infinite-pagination
+            *ngIf="infiniteScrolling"
+            [pagination]="pagination"
+            [loading]="documentList.infiniteLoading"
+            [pageSize]="currentMaxItems"
+            (loadMore)="loadNextBatch($event)">
+            {{ 'ADF-DOCUMENT-LIST.LAYOUT.LOAD_MORE' | translate }}
+        </adf-infinite-pagination>
     </adf-upload-drag-area>
 </div>
 
