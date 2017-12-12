@@ -16,8 +16,8 @@
  */
 
 import { Component, ViewChild } from '@angular/core';
-import { FormModel, FormService } from 'ng2-activiti-form';
-import { ActivitiForm } from 'ng2-activiti-form';
+import { FormModel, FormService } from '@alfresco/adf-core';
+import { FormComponent } from '@alfresco/adf-core';
 
 @Component({
     selector: 'form-list-demo',
@@ -28,8 +28,8 @@ import { ActivitiForm } from 'ng2-activiti-form';
             <adf-form [form]="form" [data]="restoredData">
             </adf-form>
         </div>
-        <button md-button (click)="store()" color="primary">{{'FORM-LIST.STORE' | translate }}</button>
-        <button md-button (click)="restore()" color="primary">{{'FORM-LIST.RESTORE' | translate }}</button>
+        <button mat-button (click)="store()" color="primary">{{'FORM-LIST.STORE' | translate }}</button>
+        <button mat-button (click)="restore()" color="primary">{{'FORM-LIST.RESTORE' | translate }}</button>
     `,
     styles: [`
         .form-container {
@@ -44,8 +44,8 @@ import { ActivitiForm } from 'ng2-activiti-form';
 })
 export class FormListDemoComponent {
 
-    @ViewChild(ActivitiForm)
-    activitiForm: ActivitiForm;
+    @ViewChild(FormComponent)
+    activitiForm: FormComponent;
 
     formList: any [] = [];
 

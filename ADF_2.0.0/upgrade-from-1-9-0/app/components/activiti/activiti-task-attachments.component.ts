@@ -16,9 +16,9 @@
  */
 
 import { Component, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
-import { ProcessUploadService, TaskAttachmentListComponent } from 'ng2-activiti-tasklist';
-import { ActivitiTaskListService } from 'ng2-activiti-tasklist';
-import { UploadService } from 'ng2-alfresco-core';
+import { ProcessUploadService, TaskAttachmentListComponent } from '@alfresco/adf-process-services';
+import { TaskListService } from '@alfresco/adf-process-services';
+import { UploadService } from '@alfresco/adf-core';
 
 @Component({
     selector: 'activiti-task-attachments',
@@ -44,7 +44,7 @@ export class ActivitiTaskAttachmentsComponent implements OnInit, OnChanges {
     taskDetails: any;
 
     constructor(private uploadService: UploadService,
-                private activitiTaskList: ActivitiTaskListService) {
+                private activitiTaskList: TaskListService) {
 
     }
 

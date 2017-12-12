@@ -17,12 +17,12 @@
 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AppDefinitionRepresentationModel } from 'ng2-activiti-tasklist';
+import { AppDefinitionRepresentationModel } from '@alfresco/adf-process-services';
 
 @Component({
     selector: 'activiti-apps-view',
     template: `
-        <activiti-apps (appClick)="onAppClicked($event)"></activiti-apps>
+        <adf-apps (appClick)="onAppClicked($event)"></adf-apps>
     `
 })
 export class ActivitiAppsViewComponent {

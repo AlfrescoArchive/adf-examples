@@ -16,16 +16,16 @@
  */
 
 import { ChangeDetectorRef, Component, Input, OnInit, Optional, ViewChild } from '@angular/core';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { MinimalNodeEntity } from 'alfresco-js-api';
 import {
-    AlfrescoApiService, AlfrescoContentService, AlfrescoTranslationService, CreateFolderDialogComponent,
+    AlfrescoApiService, ContentService, TranslationService, CreateFolderDialogComponent,
     DownloadZipDialogComponent, FileUploadEvent, FolderCreatedEvent, NotificationService,
     SiteModel, UploadService
-} from 'ng2-alfresco-core';
-import { DataColumn, DataRow } from 'ng2-alfresco-datatable';
-import { DocumentListComponent, PermissionStyleModel } from 'ng2-alfresco-documentlist';
+} from '@alfresco/adf-core';
+import { DataColumn, DataRow } from '@alfresco/adf-core';
+import { DocumentListComponent, PermissionStyleModel } from '@alfresco/adf-content-services';
 
 const DEFAULT_FOLDER_TO_SHOW = '-my-';
 
@@ -83,9 +83,9 @@ export class FilesComponent implements OnInit {
                 private apiService: AlfrescoApiService,
                 private notificationService: NotificationService,
                 private uploadService: UploadService,
-                private contentService: AlfrescoContentService,
-                private dialog: MdDialog,
-                private translateService: AlfrescoTranslationService,
+                private contentService: ContentService,
+                private dialog: MatDialog,
+                private translateService: TranslationService,
                 private router: Router,
                 @Optional() private route: ActivatedRoute) {
     }

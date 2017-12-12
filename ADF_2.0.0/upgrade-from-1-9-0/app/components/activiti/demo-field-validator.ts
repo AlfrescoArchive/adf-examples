@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import { FormFieldModel, FormFieldTypes, FormFieldValidator } from 'ng2-activiti-form';
+import { FormFieldModel, FormFieldTypes, FormFieldValidator } from '@alfresco/adf-core';
 
 export class DemoFieldValidator implements FormFieldValidator {
 

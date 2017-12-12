@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { AlfrescoSettingsService, LogService, StorageService } from 'ng2-alfresco-core';
+import { SettingsService, LogService, StorageService } from '@alfresco/adf-core';
 
 @Component({
     selector: 'app-settings',
@@ -22,7 +22,7 @@ export class SettingsComponent {
     urlFormControlEcm = new FormControl('', [Validators.required, Validators.pattern(this.HOST_REGEX)]);
     urlFormControlBpm = new FormControl('', [Validators.required, Validators.pattern(this.HOST_REGEX)]);
 
-    constructor(private settingsService: AlfrescoSettingsService,
+    constructor(private settingsService: SettingsService,
                 private storage: StorageService,
                 private logService: LogService) {
         this.ecmHostTmp = this.ecmHost = storage.getItem('ecmHost') || this.settingsService.ecmHost;

@@ -3,7 +3,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { MinimalNodeEntity } from 'alfresco-js-api';
-import { AlfrescoAuthenticationService } from 'ng2-alfresco-core';
+import { AuthenticationService } from '@alfresco/adf-core';
 
 @Component({
     selector: 'search-bar',
@@ -19,7 +19,7 @@ export class SearchBarComponent {
     expand = new EventEmitter();
 
     constructor(public router: Router,
-                public authService: AlfrescoAuthenticationService) {
+                public authService: AuthenticationService) {
     }
 
     isLoggedIn(): boolean {

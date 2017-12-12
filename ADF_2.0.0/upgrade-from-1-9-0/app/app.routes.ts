@@ -2,7 +2,7 @@
 
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard, AuthGuardEcm, AuthGuardBpm } from 'ng2-alfresco-core';
+import { AuthGuard, AuthGuardEcm, AuthGuardBpm } from '@alfresco/adf-core';
 
 import {
   AboutComponent,

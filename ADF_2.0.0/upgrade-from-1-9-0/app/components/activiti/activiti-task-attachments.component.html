@@ -4,7 +4,7 @@
         <adf-upload-drag-area
             [parentId]="taskId"
             [disabled]="isCompletedTask()"
-            [showNotificationBar]="false">
+            deprecated="false">
             <adf-task-attachment-list #taskAttachList
                 *ngIf="taskId"
                 [taskId]="taskId"

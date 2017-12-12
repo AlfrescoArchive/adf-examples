@@ -4,27 +4,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Editor3DModule } from 'ng2-3d-editor';
 
-import { AppConfigService, CoreModule, TRANSLATION_PROVIDER } from 'ng2-alfresco-core';
-import { DataTableModule } from 'ng2-alfresco-datatable';
+import { AppConfigService, CoreModule, TRANSLATION_PROVIDER } from '@alfresco/adf-core';
+import { DataTableModule } from '@alfresco/adf-core';
 import { DebugAppConfigService } from './services/debug-app-config.service';
 
-import { SearchModule } from 'ng2-alfresco-search';
-import { DocumentListModule } from 'ng2-alfresco-documentlist';
+import { SearchModule } from '@alfresco/adf-content-services';
+import { DocumentListModule } from '@alfresco/adf-content-services';
 import { CustomSourcesComponent } from './components/files/custom-sources.component';
 
 import { MaterialModule } from './material.module';
-import { UploadModule } from 'ng2-alfresco-upload';
-import { TagModule } from 'ng2-alfresco-tag';
-import { ActivitiFormModule } from 'ng2-activiti-form';
+import { UploadModule } from '@alfresco/adf-content-services';
+import { TagModule } from '@alfresco/adf-content-services';
+import { FormModule } from '@alfresco/adf-core';
 
-import { ActivitiTaskListModule } from 'ng2-activiti-tasklist';
-import { ActivitiProcessListModule } from 'ng2-activiti-processlist';
-import { AnalyticsModule } from 'ng2-activiti-analytics';
-import { DiagramsModule } from 'ng2-activiti-diagrams';
+import { TaskListModule } from '@alfresco/adf-process-services';
+import { ProcessListModule } from '@alfresco/adf-process-services';
+import { AnalyticsModule } from '@alfresco/adf-insights';
+import { DiagramsModule } from '@alfresco/adf-insights';
 import { FormListDemoComponent } from './components/form/form-list-demo.component';
-  import { LoginModule } from 'ng2-alfresco-login';
-import { UserInfoModule } from 'ng2-alfresco-userinfo';
-import { ViewerModule } from 'ng2-alfresco-viewer';
+  import { LoginModule } from '@alfresco/adf-core';
+import { UserInfoModule } from '@alfresco/adf-core';
+import { ViewerModule } from '@alfresco/adf-core';
 import { AppComponent } from './app.component';
 import { routing } from './app.routes';
 import { ThemePickerModule } from './components/theme-picker/theme-picker';
@@ -66,10 +66,10 @@ if (process.env.ENV === 'production') {
         MaterialModule,
         UploadModule,
         ViewerModule,
-        ActivitiFormModule,
+        FormComponentModule,
         
-        ActivitiTaskListModule,
-        ActivitiProcessListModule,
+        TaskListModule,
+        ProcessListModule,
         AnalyticsModule,
         DiagramsModule, 
         LoginModule,

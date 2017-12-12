@@ -2,8 +2,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
-import { AlfrescoAuthenticationService, AppConfigService, BpmProductVersionModel, DiscoveryApiService, EcmProductVersionModel  } from 'ng2-alfresco-core';
-import { ObjectDataTableAdapter } from 'ng2-alfresco-datatable';
+import { AuthenticationService, AppConfigService, BpmProductVersionModel, DiscoveryApiService, EcmProductVersionModel  } from '@alfresco/adf-core';
+import { ObjectDataTableAdapter } from '@alfresco/adf-core';
 
 @Component({
     selector: 'adf-about-page',
@@ -27,7 +27,7 @@ export class AboutComponent implements OnInit {
 
     constructor(private http: Http,
                 private appConfig: AppConfigService,
-                private authService: AlfrescoAuthenticationService,
+                private authService: AuthenticationService,
                 private discovery: DiscoveryApiService) {
     }
 

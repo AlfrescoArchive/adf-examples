@@ -64,7 +64,7 @@ adf-document-list ::ng-deep adf-datatable tr.is-selected .image-table-cell::befo
 }
 
 .adf-files-toolbar {
-    & /deep/ md-toolbar-row {
+    & /deep/ mat-toolbar-row {
         white-space: initial;
 
         & /deep/ a.adf-breadcrumb-item-anchor {

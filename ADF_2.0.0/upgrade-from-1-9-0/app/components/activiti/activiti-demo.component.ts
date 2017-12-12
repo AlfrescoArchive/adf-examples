@@ -19,19 +19,19 @@
 import { AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Pagination } from 'alfresco-js-api';
-import { AnalyticsReportListComponent } from 'ng2-activiti-analytics';
+import { AnalyticsReportListComponent } from '@alfresco/adf-insights';
 import {
     DynamicTableRow, FORM_FIELD_VALIDATORS, FormEvent, FormFieldEvent, FormRenderingService,
     FormService, ValidateDynamicTableRowEvent
-} from 'ng2-activiti-form';
+} from '@alfresco/adf-core';
 import {
-    FilterProcessRepresentationModel,
+    any,
     ProcessFiltersComponent,
     ProcessInstance,
     ProcessInstanceDetailsComponent,
     ProcessInstanceListComponent,
     StartProcessInstanceComponent
-} from 'ng2-activiti-processlist';
+} from '@alfresco/adf-process-services';
 import {
     AppsListComponent,
     FilterRepresentationModel,
@@ -40,13 +40,13 @@ import {
     TaskFiltersComponent,
     TaskListComponent,
     TaskListService
-} from 'ng2-activiti-tasklist';
-import { AlfrescoApiService } from 'ng2-alfresco-core';
+} from '@alfresco/adf-process-services';
+import { AlfrescoApiService } from '@alfresco/adf-core';
 import {
     DataSorting,
     ObjectDataRow,
     ObjectDataTableAdapter
-} from 'ng2-alfresco-datatable';
+} from '@alfresco/adf-core';
 import { Subscription } from 'rxjs/Rx';
 import { /*CustomEditorComponent*/ CustomStencil01 } from './custom-editor/custom-editor.component';
 import { DemoFieldValidator } from './demo-field-validator';
@@ -114,7 +114,7 @@ export class ActivitiDemoComponent implements AfterViewInit, OnDestroy, OnInit {
 
     taskFilter: FilterRepresentationModel;
     report: any;
-    processFilter: FilterProcessRepresentationModel;
+    processFilter: any;
 
     sub: Subscription;
     blobFile: any;
@@ -274,7 +274,7 @@ export class ActivitiDemoComponent implements AfterViewInit, OnDestroy, OnInit {
         this.currentTaskId = this.taskList.getCurrentId();
     }
 
-    onProcessFilterClick(event: FilterProcessRepresentationModel): void {
+    onProcessFilterClick(event: any): void {
         this.currentProcessInstanceId = null;
         this.processFilter = event;
     }
