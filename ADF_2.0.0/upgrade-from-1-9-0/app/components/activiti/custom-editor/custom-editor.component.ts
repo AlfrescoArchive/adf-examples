@@ -18,7 +18,7 @@
 /* tslint:disable */
 
 import { Component, NgModule } from '@angular/core';
-import { WidgetComponent } from 'ng2-activiti-form';
+import { WidgetComponent } from '@alfresco/adf-core';
 
 @Component({
     selector: 'custom-editor',
