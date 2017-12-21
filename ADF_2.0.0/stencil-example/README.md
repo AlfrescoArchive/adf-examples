@@ -1,8 +1,5 @@
-# Search Customisation Example
-Search Customisation Example
-
-![Search Custom result example](https://github.com/Alfresco/adf-examples/blob/master/ADF_2.0.0/search-customisation-example/src/assets/SearchCardsJpg.jpg "Search Custom result example")
-
+# stencil-example
+stencil example
 
 ## Prerequisites
 
