@@ -92,7 +92,7 @@ In the login call back perform call to content
 .9 Edit template
 Iterate over the API data
 
-```html
+``` javascript
 
 <table v-if="tasks && tasks.length" align="center" border={1}>
   <tr v-for="task of tasks">
