@@ -71,7 +71,7 @@ In the login call back perform call to process
     error => {
       console.log('Error', error);
     });
-``
+```
 
 .8 Call Content API
 
