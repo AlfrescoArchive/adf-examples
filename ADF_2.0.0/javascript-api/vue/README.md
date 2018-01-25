@@ -92,7 +92,8 @@ In the login call back perform call to content
 .9 Edit template
 Iterate over the API data
 
-```
+```html
+
 <table v-if="tasks && tasks.length" align="center" border={1}>
   <tr v-for="task of tasks">
     <td>{{task.id}}</td>
@@ -106,6 +107,7 @@ Iterate over the API data
     <td>{{file.entry.name}}</td>
   </tr>
 </table>
+
 ```
 
 # Start
