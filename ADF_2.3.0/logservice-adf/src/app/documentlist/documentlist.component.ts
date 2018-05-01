@@ -1,5 +1,5 @@
 import { Component, ViewChild, Input } from '@angular/core';
-import { NotificationService } from '@alfresco/adf-core';
+import { NotificationService, LogService } from '@alfresco/adf-core';
 import { DocumentListComponent } from '@alfresco/adf-content-services';
 
 @Component({
@@ -17,9 +17,11 @@ export class DocumentlistComponent {
   @ViewChild(DocumentListComponent)
   documentList: DocumentListComponent;
 
-  constructor(private notificationService: NotificationService) { }
+  constructor(private notificationService: NotificationService,private logService: LogService) {
+  }
 
   uploadSuccess(event: any) {
+    this.logService.info('File uploaded')
     this.notificationService.openSnackMessage('File uploaded');
     this.documentList.reload();
   }
