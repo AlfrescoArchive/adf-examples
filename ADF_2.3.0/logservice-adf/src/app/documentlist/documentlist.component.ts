@@ -1,0 +1,42 @@
+import { Component, ViewChild, Input } from '@angular/core';
+import { NotificationService, LogService } from '@alfresco/adf-core';
+import { DocumentListComponent } from '@alfresco/adf-content-services';
+
+@Component({
+  selector: 'app-documentlist',
+  templateUrl: './documentlist.component.html',
+  styleUrls: ['./documentlist.component.css']
+})
+export class DocumentlistComponent {
+
+  @Input()
+  showViewer: boolean = false;
+
+  nodeId: string = null;
+
+  @ViewChild(DocumentListComponent)
+  documentList: DocumentListComponent;
+
+  constructor(private notificationService: NotificationService,private logService: LogService) {
+  }
+
+  uploadSuccess(event: any) {
+    this.logService.info('File uploaded')
+    this.notificationService.openSnackMessage('File uploaded');
+    this.documentList.reload();
+  }
+
+  showPreview(event) {
+    this.showViewer = false;
+    if (event.value.entry.isFile) {
+      this.nodeId = event.value.entry.id;
+      this.showViewer = true;
+    }
+  }
+
+  onGoBack(event: any) {
+    this.showViewer = false;
+    this.nodeId = null;
+  }
+
+}
