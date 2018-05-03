@@ -26,41 +26,45 @@ import { TasksComponent } from './tasks/tasks.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
 import { DocumentlistComponent } from './documentlist/documentlist.component';
 import { StartProcessComponent } from './start-process/start-process.component';
+import { AppLayoutComponent } from './app-layout/app-layout.component';
 
 export const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'apps',
-    component: AppsComponent,
-    canActivate: [ AuthGuardBpm ]
-  },
-  {
-    path: 'apps/:appId/tasks',
-    component: TasksComponent,
-    canActivate: [ AuthGuardBpm ]
-  },
-  {
-    path: 'apps/:appId/tasks/:taskId',
-    component: TaskDetailsComponent,
-    canActivate: [ AuthGuardBpm ]
-  },
-  {
-    path: 'apps/:appId/start-process',
-    component: StartProcessComponent,
-    canActivate: [ AuthGuardBpm ]
-  },
-  {
-    path: 'documentlist',
-    component: DocumentlistComponent,
-    canActivate: [ AuthGuardEcm ]
-  }
-];
-
+    component: AppLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: HomeComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'apps',
+        component: AppsComponent,
+        canActivate: [AuthGuardBpm]
+      },
+      {
+        path: 'apps/:appId/tasks',
+        component: TasksComponent,
+        canActivate: [AuthGuardBpm]
+      },
+      {
+        path: 'apps/:appId/tasks/:taskId',
+        component: TaskDetailsComponent,
+        canActivate: [AuthGuardBpm]
+      },
+      {
+        path: 'apps/:appId/start-process',
+        component: StartProcessComponent,
+        canActivate: [AuthGuardBpm]
+      },
+      {
+        path: 'documentlist',
+        component: DocumentlistComponent,
+        canActivate: [AuthGuardEcm]
+      }]
+  }];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
