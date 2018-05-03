@@ -1,0 +1,31 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - "8"
+
+cache:
+  directories:
+     - ./node_modules
+
+install:
+  - npm install
+
+script:
+  # Use Chromium instead of Chrome.
+  - export CHROME_BIN=chromium-browser
+  - xvfb-run -a npm run test -- --single-run --no-progress --browser=ChromeNoSandbox
+  #- xvfb-run -a npm run e2e -- --no-progress --config=protractor-ci.conf.js
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -X gcov
+#Uncomment this part if you want publish your docker image
+#  - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
+#  - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
+#  - export TAG=`if [ "$BRANCH" == "master" ]; then echo "latest"; else echo $BRANCH ; fi`
+#  - docker build -t $DOCKER_REPO:$TAG .
+#  # Publish extra image based on Travis build number
+#  - docker tag $DOCKER_REPO:$TAG $DOCKER_REPO:travis-$TRAVIS_BUILD_NUMBER
+#  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+#  - docker push $DOCKER_REPO
