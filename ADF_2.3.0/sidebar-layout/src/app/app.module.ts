@@ -18,6 +18,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { TaskDetailsComponent } from './task-details/task-details.component';
 import { DocumentlistComponent } from './documentlist/documentlist.component';
 import { StartProcessComponent } from './start-process/start-process.component';
+import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { appRoutes } from './app.routes';
 
 @NgModule({
@@ -42,7 +43,8 @@ import { appRoutes } from './app.routes';
     TasksComponent,
     TaskDetailsComponent,
     DocumentlistComponent,
-    StartProcessComponent
+    StartProcessComponent,
+    AppLayoutComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
