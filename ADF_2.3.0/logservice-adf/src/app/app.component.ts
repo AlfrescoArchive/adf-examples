@@ -16,7 +16,7 @@ export class AppComponent {
               private router: Router) {
     translationService.use('en');
 
-    const mixpanel = Mixpanel.init('YOUR_MIXPANEL_TOKEN');
+    const mixpanel: any = Mixpanel.init('YOUR_MIXPANEL_TOKEN');
     mixpanel.set_config({ debug: true });
 
     logService.onMessage.subscribe((message) => {
