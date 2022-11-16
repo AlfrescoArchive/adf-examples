@@ -77,7 +77,7 @@
     "karma-sourcemap-loader": "0.3.7",
     "karma-systemjs": "0.16.0",
     "karma-webpack": "2.0.3",
-    "loader-utils": "1.1.0",
+    "loader-utils": "1.4.2",
     "merge-stream": "1.0.1",
     "null-loader": "0.1.1",
     "package-json-merge": "0.0.1",
