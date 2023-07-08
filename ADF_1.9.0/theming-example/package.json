@@ -101,7 +101,7 @@
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "2.0.3",
     "loader-utils": "^1.1.0",
-    "node-sass": "4.5.3",
+    "node-sass": "9.0.0",
     "null-loader": "0.1.1",
     "raw-loader": "0.5.1",
     "rimraf": "2.6.1",
